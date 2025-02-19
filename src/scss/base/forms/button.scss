@@ -1,0 +1,82 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+	position: relative;
+	display: inline-flex;
+	padding: toRem(20) toRem(43);
+	font-size: toRem(16);
+	//font-weight: 300;
+	line-height: 1.5;
+	text-transform: uppercase;
+	//border: toRem(1) solid transparent;
+	border-radius: toRem(5);
+	background-color: $whiteColor;
+	overflow: hidden;
+
+	&::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $darkTurquoiseColor;
+		 //opacity: 0.5;
+		 //transition: opacity 0.3s ease 0s;
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		background-color: #fff;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.5;
+		transition: opacity 0.3s ease 0s;
+	}
+
+	span {
+		position: relative;
+		flex: 0 0 auto;
+		z-index: 2;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			&::after {
+				opacity: 0;
+			}
+		}
+	}
+	&--transparent {
+		color: $darkTurquoiseColor;
+		border-color: $darkTurquoiseColor;
+		transition: all 0.3s ease 0s;
+
+		&::before {
+			display: none;
+			transition: all 0.3s ease 0s;
+		}
+
+		&::after {
+			opacity: 0;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+				border-color: transparent;
+
+				&::before {
+					display: block;
+				}
+			}
+		}
+	}
+	&--fw {
+		width: 100%;
+	}
+}

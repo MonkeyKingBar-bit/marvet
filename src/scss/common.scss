@@ -1,0 +1,55 @@
+.block-header {
+  font-size: toRem(16);
+  line-height: 1.5;
+  font-weight: 400;
+  display: grid;
+  justify-items: start;
+  gap: toRem(20);
+
+  &--center {
+    justify-items: center;
+    text-align: center;
+  }
+  &__label {
+    text-transform: capitalize;
+  }
+  &__title {
+    font-family: "Pangolin", sans-serif;
+    @include adaptiveValue("font-size", 34, 24);
+    letter-spacing: .05em; /* 5% */
+    color: $mainColor;
+  }
+  &__text {
+    max-width: toRem(500);
+    > * {
+      margin-bottom: toRem(54.5);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    blockquote {
+      font-style: italic;
+    }
+  }
+  &__button {
+    font-family: "Rubik", sans-serif;
+    color: $whiteColor;
+  }
+}
+
+.logo {
+  //text-align: center;
+  //font-family: "Pacifico", serif;
+  //text-transform: uppercase;
+  //color: #FFE55E;
+  img {
+    //@include adaptiveValue("width", 39, 29);
+    @include adaptiveValue("height", 39, 29);
+  }
+  //div {
+  //  display: flex;
+  //}
+  //span:first-child{
+  //  color: $orangeColor;
+  //}
+}
