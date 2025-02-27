@@ -16,11 +16,17 @@
   &__title {
     font-family: "Pangolin", sans-serif;
     @include adaptiveValue("font-size", 34, 24);
+    //@include adaptiveValue("line-height", 36, 26);
     letter-spacing: .05em; /* 5% */
     color: $mainColor;
   }
   &__text {
     max-width: toRem(500);
+    @include adaptiveValue("font-size", 19, 12);
+     //font-size: toRem(19);
+    letter-spacing: toRem(1.2);
+    line-height: 137.9%;
+    color: #4E4C46;
     > * {
       margin-bottom: toRem(54.5);
       &:last-child {
@@ -34,6 +40,25 @@
   &__button {
     font-family: "Rubik", sans-serif;
     color: $whiteColor;
+    column-gap: toRem(20);
+    @include adaptiveValue("padding-top", 20, 7);
+    @include adaptiveValue("padding-bottom", 20, 7);
+    @include adaptiveValue("padding-right", 43, 7);
+    @include adaptiveValue("padding-left", 43, 7);
+
+    @media (max-width: $mobileMedium) {
+      //width: 100%;
+      justify-content: center;
+      align-items: center;
+      //padding: toRem(7);
+      //padding: toRem(20) toRem(43);
+      font-size: toRem(12);
+      column-gap: toRem(10);
+
+      svg {
+        height: toRem(12);
+      }
+    }
   }
 }
 

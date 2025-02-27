@@ -11,7 +11,8 @@
 	text-transform: uppercase;
 	//border: toRem(1) solid transparent;
 	border-radius: toRem(5);
-	background-color: $whiteColor;
+	background-color: $darkTurquoiseColor;
+	color: $whiteColor;
 	overflow: hidden;
 
 	&::before {
@@ -21,7 +22,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: $darkTurquoiseColor;
+		background: $whiteColor;
 		 //opacity: 0.5;
 		 //transition: opacity 0.3s ease 0s;
 	}
@@ -29,6 +30,7 @@
 	&::after {
 		position: absolute;
 		content: "";
+		//color: $darkTurquoiseColor;
 		background-color: #fff;
 		top: 0;
 		left: 0;
@@ -39,6 +41,8 @@
 	}
 
 	span {
+		display: flex;
+		align-items: center;
 		position: relative;
 		flex: 0 0 auto;
 		z-index: 2;
@@ -52,7 +56,7 @@
 		}
 	}
 	&--transparent {
-		color: $darkTurquoiseColor;
+		color: $whiteColor;
 		border-color: $darkTurquoiseColor;
 		transition: all 0.3s ease 0s;
 
@@ -67,8 +71,12 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: $mainColor;
+				color: $darkTurquoiseColor;
 				border-color: transparent;
+
+				.button__right {
+					stroke: $darkTurquoiseColor;
+				}
 
 				&::before {
 					display: block;

@@ -21,6 +21,7 @@
 
     ._header-scroll & {
       min-height: toRem(80);
+      color: $whiteColor;
     }
 
     @media (max-width: $mobile) {
