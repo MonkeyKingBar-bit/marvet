@@ -8,8 +8,9 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<section class="page__hero hero">
-				<div class="hero__container">
+			<section data-watch="navigator" class="page__hero hero">
+				<div class="hero-text-bg">
+					<img class="hero__bg" src="@img/button/hero-bg.jpeg" alt="Marvet hero">
 					<div class="hero__content">
 						<h1 class="hero__title">Найдите своего идеального кота — любовь на лапках!</h1>
 						<p class="hero__subtitle">Профессиональный питомник &#8220;Marvet&#8221;</p>
@@ -23,22 +24,19 @@
 						</a>
 					</div>
 				</div>
-				<img class="hero__bg" src="@img/button/hero-bg.jpg" alt="fonts orange">
-			</section>
-			<section class="page__about about">
-				<div class="about__container">
-					<svg class="paw" width="94" height="93" viewBox="0 0 94 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M65.6199 40.5259C73.9761 47.2109 83.1678 33.0054 81.4966 24.6492C86.5103 9.60815 69.798 3.75884 63.9487 17.9643C56.4281 23.8136 55.5925 40.5259 65.6199 40.5259ZM66.4555 38.0191C57.2637 38.8547 60.6062 23.8136 65.6199 19.6355V18.7999C70.6336 6.26569 83.1678 11.2794 78.1541 23.8136V24.6492C79.8254 31.3342 73.1404 44.704 65.6199 38.0191H66.4555Z" fill="#124C5F"/>
-						<path d="M38.0446 30.4985C46.4007 37.1834 55.5925 22.9779 53.9213 14.6218C58.935 -0.419287 42.2227 -6.2686 36.3734 8.77248C28.8528 14.6218 28.0172 31.3341 38.0446 31.3341V30.4985ZM38.8802 27.9916C29.6884 28.8273 33.0309 13.7862 38.0446 9.6081V8.77248C43.0583 -3.76175 55.5925 1.25194 50.5788 13.7862V14.6218C52.2501 21.3067 45.5651 34.6766 38.0446 27.9916H38.8802Z" fill="#124C5F"/>
-						<path d="M79.8253 68.9367C87.3458 73.9504 96.5376 66.4299 93.1951 58.0737C96.5376 47.2107 80.6609 41.3614 75.6472 52.2244C68.1266 56.4025 70.6335 68.1011 78.9896 68.9367H79.8253ZM80.6609 66.4299H79.8253C73.1403 65.5943 71.4691 56.4025 77.3184 53.8956L78.154 53.06C81.4965 44.7039 94.0307 49.7176 90.6883 58.0737V58.9093C93.1951 64.7586 86.5102 71.4436 80.6609 67.2655V66.4299Z" fill="#124C5F"/>
-						<path d="M9.63361 43.8684C17.1542 48.882 26.3459 41.3615 23.0035 33.0054C26.3459 22.1424 10.4692 16.293 5.45553 27.156C-2.06501 31.3341 0.441838 43.0327 8.79799 43.8684H9.63361ZM10.4692 41.3615H9.63361C2.94868 40.5259 1.27745 31.3341 7.12676 28.8273L7.96238 27.9917C11.3048 19.6355 23.8391 24.6492 20.4966 33.0054V33.841C23.0035 39.6903 16.3185 46.3752 10.4692 42.1971V41.3615Z" fill="#124C5F"/>
-						<path d="M66.4553 66.43C74.8114 40.5259 31.3594 24.6492 21.332 49.7177C-4.57205 63.9231 12.9759 81.4711 32.195 88.9916C51.4142 95.6765 77.3183 94.0053 66.4553 66.43ZM63.9484 66.43V67.2656C73.9758 92.3341 50.5786 94.0053 33.0307 87.3204C15.4827 80.6354 -2.0652 65.5944 22.1677 52.2245L23.0033 51.3889C32.195 27.9917 71.469 43.0327 63.9484 66.43Z" fill="#124C5F"/>
+				<a href="#" data-goto=".hero" class="up">
+					<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M2 16H30M30 16L16 2M30 16L16 30" stroke="#124C5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
+				</a>
+			</section>
+			<section data-watch="navigator" class="page__about about">
+				<div class="about__container">
 					<div class="about__body">
 						<div class="about__picture">
 							<div class="about__video">
 								<a href="#" class="video_icon">
-									<svg width="56" height="52" viewBox="0 0 56 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<svg width="56"  height="52" viewBox="0 0 56 52" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M40.1768 25.2192C40.1445 25.5329 39.939 25.8759 39.4652 26.2245C34.8191 29.6429 30.1731 33.0612 25.5271 36.4795C24.5351 37.2093 22.1814 37.3792 22.1814 35.6621C22.1814 29.3369 22.1814 23.0117 22.1814 16.6865C22.1814 15.1327 24.7077 14.7498 25.7188 15.3824C30.3649 18.2893 35.0109 21.1962 39.6569 24.103C40.1889 24.4359 40.3057 24.8349 40.1768 25.2192ZM55.9736 30.6107C54.5013 63.3484 -4.99241 56.5663 1.46333 22.1041C4.17206 7.64391 17.1212 0.0391458 31.3488 0.95552C47.3638 1.98707 55.6823 15.4955 55.9723 30.3941C55.973 30.4316 55.9466 30.4628 55.9413 30.499C55.9472 30.5395 55.9756 30.5654 55.9736 30.6107ZM52.9882 31.0344C52.7465 20.4885 48.7135 9.09901 38.3074 4.56613C24.5154 -1.44157 8.26584 5.644 4.76093 20.2453C1.62606 33.3049 8.5975 44.8837 21.3533 49.0718C34.951 53.5364 52.2452 46.511 52.9882 31.0344Z" fill="white"/>
 									</svg>
 									<span>Посмотреть</span>
@@ -65,35 +63,9 @@
 							</button>
 						</div>
 					</div>
-<!--					<ul class="about__items">-->
-<!--						<li class="about__item">-->
-<!--							<div class="about__link link-cart">-->
-<!--								<div class="link-cart__picture">-->
-<!--									<img src="@img/contenIcon/medal.png" alt="">-->
-<!--								</div>-->
-<!--								<div class="link-cart__label">pet food</div>-->
-<!--							</div>-->
-<!--						</li>-->
-<!--						<li class="about__item">-->
-<!--							<div class="about__link link-cart">-->
-<!--								<div class="link-cart__picture">-->
-<!--									<img src="@img/contenIcon/pet.png" alt="">-->
-<!--								</div>-->
-<!--								<div class="link-cart__label">pet care</div>-->
-<!--							</div>-->
-<!--						</li>-->
-<!--						<li class="about__item">-->
-<!--							<div class="about__link link-cart">-->
-<!--								<div class="link-cart__picture">-->
-<!--									<img src="@img/contenIcon/house.png" alt="">-->
-<!--								</div>-->
-<!--								<div class="link-cart__label">pet accessories</div>-->
-<!--							</div>-->
-<!--						</li>-->
-<!--					</ul>-->
 				</div>
 			</section>
-			<section class="page__advice advice">
+			<section data-watch="navigator" class="page__advice advice">
 				<div class="advice__container">
 					<div class="advice__content content">
 						<div class="content__left">
@@ -106,7 +78,7 @@
 										пушистого друга будут наполнены радостью и счастьем!
 									</p>
 								</div>
-								<a href="#" class="block-header__button button"><span>Наши контакты &#8594;</span></a>
+								<a href="#" class="block-header__button button"><span>Полезная информация &#8594;</span></a>
 							</div>
 						</div>
 						<div class="content__right">
@@ -161,6 +133,171 @@
 									подтверджающие рождение от здоровых родителей и выведение с соблюдением всех
 									стандартов.
 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section data-watch="navigator" class="page__product product">
+				<div class="product__container">
+					<div class="product__content block-header block-header--center">
+						<h2 class="block-header__title">Наши питомцы</h2>
+					</div>
+					<div class="product__body">
+						<div class="product__carts">
+							<article data-watch class="product__cart cart-product">
+								<div class="cart-product__picture">
+									<div class="cart-product__image">
+										<img class="cart-product__img ibg" src="@img/pets/cat1.png" alt="cat men">
+									</div>
+									<div class="cart-product__description">
+										<h3 class="description-title">
+											<span>Коты</span>
+											<span>Искусство грации и уютного тепла</span></h3>
+										<p class="description-text">
+											Каждый кот — это не просто пушистый комок, а уникальная личность со своими
+											интересами и предпочтениями.
+										</p>
+									</div>
+								</div>
+								<div class="cart-product__content">
+									<div class="cart-product__info">
+										<h3 class="cart-product__title"><a href="#">Посмотреть</a></h3>
+									</div>
+								</div>
+							</article>
+							<article data-watch class="product__cart cart-product">
+								<div class="cart-product__picture">
+									<div class="cart-product__image">
+										<img class="cart-product__img ibg" src="@img/pets/cat2.png" alt="kitten">
+									</div>
+									<div class="cart-product__description">
+										<h3 class="description-title">
+											<span>Котята</span>
+											<span>Радуга нежности и безграничной игры</span></h3>
+										<p class="description-text">
+											Мы уделяем внимание здоровью, социализации и уходу за котятами, чтобы каждый
+											из них нашёл свой любящий дом.
+										</p>
+									</div>
+								</div>
+								<div class="cart-product__content">
+									<div class="cart-product__info">
+										<h3 class="cart-product__title"><a href="#">Посмотреть</a></h3>
+									</div>
+								</div>
+							</article>
+							<article data-watch class="product__cart cart-product">
+								<div class="cart-product__picture">
+									<div class="cart-product__image">
+										<img class="cart-product__img ibg" src="@img/pets/cat3.png" alt="cat women">
+									</div>
+									<div class="cart-product__description">
+										<h3 class="description-title">
+											<span>Кошки</span>
+											<span>Пушистые тайны и узы дружбы</span>
+										</h3>
+										<p class="description-text">
+											Каждая кошка прошла медицинское обследование и продемонстрировала свое
+											обаяние и индивидуальность.
+										</p>
+									</div>
+								</div>
+								<div class="cart-product__content">
+									<div class="cart-product__info">
+										<h3 class="cart-product__title"><a href="#">Посмотреть</a></h3>
+									</div>
+								</div>
+							</article>
+						</div>
+						<button class="product__button button"><span>Советы по уходу</span></button>
+					</div>
+				</div>
+			</section>
+			<section data-watch="navigator" class="page__review review">
+				<div class="review__container">
+					<div class="review__slider swiper">
+						<div class="review__wrapper swiper-wrapper">
+							<div class="review__slide swiper-slide">
+								<div class="review__icon">
+									<svg width="72" height="67" viewBox="0 0 72 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.6946 45.1895C11.0448 44.7201 10.4193 44.2352 9.81794 43.7347M7.13673 41.1859C3.26473 37.0001 1 31.9272 1 26.4705C1.03721 -7.48577 70.946 -7.49458 70.9761 26.4705C71.4111 34.2762 65.8326 40.0022 60.6741 45.6789C58.9224 51.1795 49.3478 67.0153 45.7611 65.9486C43.2562 65.204 45.6964 51.8405 42.3055 52.2929C38.8393 52.7567 39.7511 52.4874 35.9854 52.4874C28.2609 52.4874 21.122 50.6259 15.3335 47.4708M49.7199 34.3387C49.7199 39.7953 43.5771 44.2188 35.9996 44.2188C28.422 44.2188 22.2792 39.7953 22.2792 34.3387C22.2792 28.8821 28.422 24.4586 35.9996 24.4586C43.5771 24.4586 49.7199 28.8821 49.7199 34.3387ZM26.3728 17.2351C27.4117 20.2542 26.2287 23.3892 23.7306 24.2373C21.2324 25.0854 18.3651 23.3255 17.3263 20.3064C16.2874 17.2874 17.4704 14.1524 19.9685 13.3042C22.4667 12.4561 25.334 14.216 26.3728 17.2351ZM52.0382 13.3161C54.5364 14.1642 55.7194 17.2992 54.6805 20.3183C53.6417 23.3374 50.7744 25.0973 48.2762 24.2491C45.7781 23.401 44.5951 20.266 45.6339 17.2469C46.6728 14.2279 49.5401 12.4679 52.0382 13.3161ZM40.7797 15.3231C40.7797 18.5137 38.6395 21.1001 35.9995 21.1001C33.3595 21.1001 31.2193 18.5137 31.2193 15.3231C31.2193 12.1325 33.3595 9.54607 35.9995 9.54607C38.6395 9.54607 40.7797 12.1325 40.7797 15.3231Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</div>
+								<blockquote class="review__item">
+									<div class="review__text _icon-scobe">
+										<p>
+											Euphoria instantly won me over with her playfulness and bright eyes,
+											while the cattery impressed me with its perfect conditions for the animals
+											and the friendly staff who were eager to answer all my questions.
+										</p>
+									</div>
+									<cite class="review__author">Somrudi Ruangnet</cite>
+								</blockquote>
+							</div>
+							<div class="review__slide swiper-slide">
+								<div class="review__icon">
+									<svg width="72" height="67" viewBox="0 0 72 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.6946 45.1895C11.0448 44.7201 10.4193 44.2352 9.81794 43.7347M7.13673 41.1859C3.26473 37.0001 1 31.9272 1 26.4705C1.03721 -7.48577 70.946 -7.49458 70.9761 26.4705C71.4111 34.2762 65.8326 40.0022 60.6741 45.6789C58.9224 51.1795 49.3478 67.0153 45.7611 65.9486C43.2562 65.204 45.6964 51.8405 42.3055 52.2929C38.8393 52.7567 39.7511 52.4874 35.9854 52.4874C28.2609 52.4874 21.122 50.6259 15.3335 47.4708M49.7199 34.3387C49.7199 39.7953 43.5771 44.2188 35.9996 44.2188C28.422 44.2188 22.2792 39.7953 22.2792 34.3387C22.2792 28.8821 28.422 24.4586 35.9996 24.4586C43.5771 24.4586 49.7199 28.8821 49.7199 34.3387ZM26.3728 17.2351C27.4117 20.2542 26.2287 23.3892 23.7306 24.2373C21.2324 25.0854 18.3651 23.3255 17.3263 20.3064C16.2874 17.2874 17.4704 14.1524 19.9685 13.3042C22.4667 12.4561 25.334 14.216 26.3728 17.2351ZM52.0382 13.3161C54.5364 14.1642 55.7194 17.2992 54.6805 20.3183C53.6417 23.3374 50.7744 25.0973 48.2762 24.2491C45.7781 23.401 44.5951 20.266 45.6339 17.2469C46.6728 14.2279 49.5401 12.4679 52.0382 13.3161ZM40.7797 15.3231C40.7797 18.5137 38.6395 21.1001 35.9995 21.1001C33.3595 21.1001 31.2193 18.5137 31.2193 15.3231C31.2193 12.1325 33.3595 9.54607 35.9995 9.54607C38.6395 9.54607 40.7797 12.1325 40.7797 15.3231Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</div>
+								<blockquote class="review__item">
+									<div class="review__text _icon-scobe">
+										<p>
+											Euphoria instantly won me over with her playfulness and bright eyes,
+											while the cattery impressed me with its perfect conditions for the animals
+											and the friendly staff who were eager to answer all my questions.
+										</p>
+									</div>
+									<cite class="review__author">Somrudi Ruangnet</cite>
+								</blockquote>
+							</div>
+							<div class="review__slide swiper-slide">
+								<div class="review__icon">
+									<svg width="72" height="67" viewBox="0 0 72 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.6946 45.1895C11.0448 44.7201 10.4193 44.2352 9.81794 43.7347M7.13673 41.1859C3.26473 37.0001 1 31.9272 1 26.4705C1.03721 -7.48577 70.946 -7.49458 70.9761 26.4705C71.4111 34.2762 65.8326 40.0022 60.6741 45.6789C58.9224 51.1795 49.3478 67.0153 45.7611 65.9486C43.2562 65.204 45.6964 51.8405 42.3055 52.2929C38.8393 52.7567 39.7511 52.4874 35.9854 52.4874C28.2609 52.4874 21.122 50.6259 15.3335 47.4708M49.7199 34.3387C49.7199 39.7953 43.5771 44.2188 35.9996 44.2188C28.422 44.2188 22.2792 39.7953 22.2792 34.3387C22.2792 28.8821 28.422 24.4586 35.9996 24.4586C43.5771 24.4586 49.7199 28.8821 49.7199 34.3387ZM26.3728 17.2351C27.4117 20.2542 26.2287 23.3892 23.7306 24.2373C21.2324 25.0854 18.3651 23.3255 17.3263 20.3064C16.2874 17.2874 17.4704 14.1524 19.9685 13.3042C22.4667 12.4561 25.334 14.216 26.3728 17.2351ZM52.0382 13.3161C54.5364 14.1642 55.7194 17.2992 54.6805 20.3183C53.6417 23.3374 50.7744 25.0973 48.2762 24.2491C45.7781 23.401 44.5951 20.266 45.6339 17.2469C46.6728 14.2279 49.5401 12.4679 52.0382 13.3161ZM40.7797 15.3231C40.7797 18.5137 38.6395 21.1001 35.9995 21.1001C33.3595 21.1001 31.2193 18.5137 31.2193 15.3231C31.2193 12.1325 33.3595 9.54607 35.9995 9.54607C38.6395 9.54607 40.7797 12.1325 40.7797 15.3231Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</div>
+								<blockquote class="review__item">
+									<div class="review__text _icon-scobe">
+										<p>
+											Euphoria instantly won me over with her playfulness and bright eyes,
+											while the cattery impressed me with its perfect conditions for the animals
+											and the friendly staff who were eager to answer all my questions.
+										</p>
+									</div>
+									<cite class="review__author">Somrudi Ruangnet</cite>
+								</blockquote>
+							</div>
+							<div class="review__slide swiper-slide">
+								<div class="review__icon">
+									<svg width="72" height="67" viewBox="0 0 72 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.6946 45.1895C11.0448 44.7201 10.4193 44.2352 9.81794 43.7347M7.13673 41.1859C3.26473 37.0001 1 31.9272 1 26.4705C1.03721 -7.48577 70.946 -7.49458 70.9761 26.4705C71.4111 34.2762 65.8326 40.0022 60.6741 45.6789C58.9224 51.1795 49.3478 67.0153 45.7611 65.9486C43.2562 65.204 45.6964 51.8405 42.3055 52.2929C38.8393 52.7567 39.7511 52.4874 35.9854 52.4874C28.2609 52.4874 21.122 50.6259 15.3335 47.4708M49.7199 34.3387C49.7199 39.7953 43.5771 44.2188 35.9996 44.2188C28.422 44.2188 22.2792 39.7953 22.2792 34.3387C22.2792 28.8821 28.422 24.4586 35.9996 24.4586C43.5771 24.4586 49.7199 28.8821 49.7199 34.3387ZM26.3728 17.2351C27.4117 20.2542 26.2287 23.3892 23.7306 24.2373C21.2324 25.0854 18.3651 23.3255 17.3263 20.3064C16.2874 17.2874 17.4704 14.1524 19.9685 13.3042C22.4667 12.4561 25.334 14.216 26.3728 17.2351ZM52.0382 13.3161C54.5364 14.1642 55.7194 17.2992 54.6805 20.3183C53.6417 23.3374 50.7744 25.0973 48.2762 24.2491C45.7781 23.401 44.5951 20.266 45.6339 17.2469C46.6728 14.2279 49.5401 12.4679 52.0382 13.3161ZM40.7797 15.3231C40.7797 18.5137 38.6395 21.1001 35.9995 21.1001C33.3595 21.1001 31.2193 18.5137 31.2193 15.3231C31.2193 12.1325 33.3595 9.54607 35.9995 9.54607C38.6395 9.54607 40.7797 12.1325 40.7797 15.3231Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</div>
+								<blockquote class="review__item">
+									<div class="review__text _icon-scobe">
+										<p>
+											Euphoria instantly won me over with her playfulness and bright eyes,
+											while the cattery impressed me with its perfect conditions for the animals
+											and the friendly staff who were eager to answer all my questions.
+										</p>
+									</div>
+									<cite class="review__author">Somrudi Ruangnet</cite>
+								</blockquote>
+							</div>
+						</div>
+						<div class="review__arrows">
+							<div class="review__arrow review__arrow--prew _icon-arrow">
+								<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M2 16H30M30 16L16 2M30 16L16 30" stroke="#124C5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</div>
+							<div class="review__arrow review__arrow--next _icon-arrow">
+								<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M2 16H30M30 16L16 2M30 16L16 30" stroke="#124C5F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+
 							</div>
 						</div>
 					</div>
