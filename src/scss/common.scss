@@ -21,6 +21,10 @@
   }
   &__text {
     max-width: toRem(500);
+    @include adaptiveValue("font-size", 19, 12);
+    letter-spacing: toRem(1.2);
+    line-height: 137.9%;
+    color: #4E4C46;
     > * {
       margin-bottom: toRem(54.5);
       &:last-child {
@@ -34,22 +38,46 @@
   &__button {
     font-family: "Rubik", sans-serif;
     color: $whiteColor;
+    column-gap: toRem(20);
+    @include adaptiveValue("padding-top", 20, 7);
+    @include adaptiveValue("padding-bottom", 20, 7);
+    @include adaptiveValue("padding-right", 43, 7);
+    @include adaptiveValue("padding-left", 43, 7);
+
+    @media (max-width: $mobileMedium) {
+      justify-content: center;
+      align-items: center;
+      font-size: toRem(12);
+      column-gap: toRem(10);
+
+      svg {
+        height: toRem(12);
+      }
+    }
   }
 }
 
 .logo {
-  //text-align: center;
-  //font-family: "Pacifico", serif;
-  //text-transform: uppercase;
-  //color: #FFE55E;
   img {
-    //@include adaptiveValue("width", 39, 29);
     @include adaptiveValue("height", 39, 29);
   }
-  //div {
-  //  display: flex;
-  //}
-  //span:first-child{
-  //  color: $orangeColor;
-  //}
+}
+
+.up {
+  transform: rotate(-90deg);
+  position: fixed;
+  font-size: toRem(20);
+  bottom: toRem(20);
+  right: toRem(10);
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.8s;
+  z-index: 50;
+  ._watcher-view & {
+    opacity: 0;
+    visibility: hidden;
+  }
+  @media (max-width: $mobile) {
+    display: none;
+  }
 }

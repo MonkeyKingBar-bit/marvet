@@ -14,13 +14,17 @@
     align-content: start;
     align-items: center;
     gap: toRem(10);
-    min-height: toRem(65);
+    @include adaptiveValue("min-height", 152, 65);
+    //min-height: toRem(65);
     padding-top: toRem(10);
     padding-bottom: toRem(10);
     color: $mainColor;
+    transition: min-height 0.8s;
 
     ._header-scroll & {
-      min-height: toRem(80);
+      @include adaptiveValue("min-height", 100, 65);
+      //min-height: toRem(80);
+      color: $whiteColor;
     }
 
     @media (max-width: $mobile) {
@@ -101,6 +105,10 @@
       font-size: toRem(20);
       font-weight: 700;
       text-transform: uppercase;
+    }
+    &._navigator-active {
+      text-decoration: underline;
+      text-decoration-color: #ffffff;
     }
   }
 }
