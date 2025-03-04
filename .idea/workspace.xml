@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d7c2aa-cbc7-4ee3-8a9f-97de1dcf8bfc" name="Changes" comment="fix: delete dist from ignore" />
+    <list default="true" id="e8d7c2aa-cbc7-4ee3-8a9f-97de1dcf8bfc" name="Changes" comment="fix: delete dist from ignore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +48,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
     "javascript.nodejs.core.library.configured.version": "22.4.1",
     "javascript.nodejs.core.library.typings.version": "22.4.2",
     "last_opened_file_path": "D:/Projects/Web/marvet/src/img/bg",
@@ -124,6 +127,7 @@
       <workItem from="1741127035898" duration="893000" />
       <workItem from="1741127949163" duration="645000" />
       <workItem from="1741128610640" duration="1293000" />
+      <workItem from="1741129929944" duration="130000" />
     </task>
     <task id="LOCAL-00001" summary="add: default setting, header and footer blocks">
       <option name="closed" value="true" />
@@ -197,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741129689759</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix: delete dist from ignore">
+      <option name="closed" value="true" />
+      <created>1741129993220</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741129993220</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
