@@ -9,7 +9,7 @@
 @import "fonts/fonts";
 @import "fonts/icons";
 
-$fontFamily: "Roboto";
+$fontFamily: "Roboto", sans-serif;
 $fontSize: toRem(16);
 
 $mainColor: #000000; // Цвет шрифта по умолчанию

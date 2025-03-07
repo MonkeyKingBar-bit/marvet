@@ -14,7 +14,7 @@
     text-transform: capitalize;
   }
   &__title {
-    font-family: "Pangolin", sans-serif;
+    font-family: "Pangolin", cursive;
     @include adaptiveValue("font-size", 34, 24);
     letter-spacing: .05em; /* 5% */
     color: $mainColor;

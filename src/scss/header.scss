@@ -15,7 +15,6 @@
     align-items: center;
     gap: toRem(10);
     @include adaptiveValue("min-height", 152, 65);
-    //min-height: toRem(65);
     padding-top: toRem(10);
     padding-bottom: toRem(10);
     color: $mainColor;
@@ -23,8 +22,7 @@
 
     ._header-scroll & {
       @include adaptiveValue("min-height", 100, 65);
-      //min-height: toRem(80);
-      color: $whiteColor;
+      color: $mainColor;
     }
 
     @media (max-width: $mobile) {
@@ -96,7 +94,7 @@
   }
   // .menu__link
   &__link {
-    font-family: "Pacifico", sans-serif;
+    font-family: "Pacifico", cursive;
     font-size: toRem(18);
     font-weight: 300;
     text-transform: capitalize;

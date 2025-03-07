@@ -31,6 +31,10 @@
   &__review {
     background: url("@img/bg/review_bg.png") center / cover no-repeat;
   }
+  &.catalogue {
+    margin-top: toRem(80);
+    background: url("@img/bg/catalogue_bg.png") center / cover no-repeat;
+  }
 }
 //====================================================================================================
 .hero {
@@ -64,7 +68,7 @@
     }
   }
   &__title {
-    font-family: "Pangolin", sans-serif;
+    font-family: "Pangolin", cursive;
     @include adaptiveValue("font-size", 70, 18);
     line-height: 1;
     color: $whiteColor;
@@ -83,7 +87,7 @@
   }
   // .hero__button
   &__button {
-    font-family: "Pacifico", sans-serif;
+    font-family: "Pacifico", cursive;
     text-transform: uppercase;
     column-gap: toRem(20);
     @include adaptiveValue("padding-top", 20, 7);
@@ -417,7 +421,7 @@
     &:hover {
       .cart-product__picture {
         &::after {
-          opacity: 0.6;
+          opacity: 0.3;
         }
       }
       .cart-product__button {
@@ -450,7 +454,7 @@
     flex-direction: column;
     row-gap: 25px;
     .description-title {
-      font-family: Pangolin, sans-serif;
+      font-family: "Pangolin", cursive;
       line-height: toRem(28);
       display: flex;
       flex-direction: column;
@@ -522,6 +526,201 @@
   }
 }
 
+.catalogue {
+  //==============products======================================================================================
+
+  &.product {
+    @include adaptiveValue("padding-top", 50, 20);
+    @include adaptiveValue("padding-bottom", 90, 20);
+    .block-header__title {
+      @include adaptiveValue("font-size", 48, 24);
+      letter-spacing: toRem(0.13);
+      line-height: toRem(68);
+      color: #0F173D;
+      max-width: toRem(764);
+    }
+    // .product__content
+    &__content {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 48, 20);
+      }
+    }
+    // .product__body
+    &__body {
+      display: grid;
+      @include adaptiveValue("gap", 50, 20);
+    }
+    // .product__carts
+    &__carts {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(toRem(290), 1fr));
+      @include adaptiveValue("column-gap", 53, 20);
+      @include adaptiveValue("row-gap", 62, 20);
+    }
+    // .product__cart
+    &__cart {
+    }
+    // .product__button
+    &__button {
+      justify-self: center;
+    }
+  }
+  .page__product {
+    background: transparent;
+  }
+  .cart-product {
+    @media (any-hover: hover) {
+      &:hover {
+        .cart-product__picture {
+          &::after {
+            opacity: 0.6;
+          }
+        }
+        .cart-product__button {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    // .cart-product__picture
+    &__picture {
+      position: relative;
+      margin-bottom: 0;
+      //border: toRem(1) solid $mustardColor100;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: $mustardColor100;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+    }
+    // .cart-product__image
+    &__image {
+      position: relative;
+      //padding: toRem(40);
+      aspect-ratio: 1 / 1;
+
+      img {
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        filter: drop-shadow(10px 10px 10px rgba($mainColor, 0.35));
+      }
+    }
+    // .cart-product__button
+    &__button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s;
+
+      @media (any-hover: none) {
+        top: auto;
+        transform: translate(-50%, 0);
+        bottom: 20px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    // .cart-product__content
+    &__content {
+      padding: toRem(12) toRem(24);
+      display: flex;
+      flex-direction: column;
+      gap: toRem(15);
+      background-color: $darkTurquoiseColor;
+      border-radius: toRem(8);
+    }
+    // .cart-product__info
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      gap: toRem(10);
+      @include adaptiveValue("font-size", 24, 18);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+    // .cart-product__title
+    &__title {
+      font-family: "Rubik", sans-serif;
+      @include adaptiveValue("font-size", 20, 12);
+      font-weight: 500;
+      color: #DDCA69;
+      text-transform: capitalize;
+      transition: color 0.3s ease 0s;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $whiteColor;
+        }
+      }
+    }
+    &__details {
+      font-family: "Rubik", sans-serif;
+      @include adaptiveValue("font-size", 20, 12);
+      color: $whiteColor;
+      letter-spacing: toRem(0.06);
+      &-gender, &-code {
+        color: #ffffff;
+        @include adaptiveValue("font-size", 20, 12);
+      }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: toRem(120);
+        background-color: #ffffff;
+        font-size: toRem(10);
+        color: #4E4C46;
+        text-align: center;
+        border-radius: toRem(6);
+        padding: toRem(5);
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+    }
+    // .cart-product__prise
+    &__prise {
+      color: $whiteColor;
+      font-weight: 600;
+      -webkit-text-stroke: toRem(1) #DDCA69;
+    }
+    // .cart-product__rating
+    &__rating {
+
+    }
+  }
+}
 //==============review======================================================================================
 
 .review {
@@ -574,7 +773,7 @@
   }
   // .review__author
   &__author {
-    font-family: "Pangolin", sans-serif;
+    font-family: "Pangolin", cursive;
     @include adaptiveValue("font-size", 30, 20);
     text-transform: capitalize;
     font-style: normal;
