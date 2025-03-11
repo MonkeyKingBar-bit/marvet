@@ -428,7 +428,7 @@ export function menuInit() {
 				document.documentElement.classList.toggle("menu-open");
 			}
 		});
-	};
+	}
 }
 export function menuOpen() {
 	bodyLock();
@@ -738,3 +738,16 @@ export function dataMediaQueries(array, dataSetValue) {
 	}
 }
 //================================================================================================================================================================================================================================================================================================================
+export function menuFilter() {
+	if (document.querySelector('#filter-button')) {
+		const filter_form = document.querySelector('.block-header__filter');
+		document.addEventListener('click', function (e) {
+			filter_form.style.display = filter_form.style.display === 'flex' ? 'none' : 'flex';
+		})
+		document.querySelector('.filters-btn').addEventListener('click', function () {
+			filter_form.style.display = 'none';
+		})
+	}
+}
+
+menuFilter();

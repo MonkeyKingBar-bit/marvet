@@ -55,12 +55,44 @@
 						<h2 class="block-header__title">
 							Поможем найти идеального питомца для новых хозяев
 						</h2>
-						<div class="block-header__text">
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam mi id augue ultrices, in tempus
-								elit.
-							</p>
-						</div>
+						<button id="filter-button" class="product__content-filter">
+							<img src="@img/button/filters.svg" alt="filter">
+							<span class="product__content-filter__text">Фильтр</span>
+						</button>
+						<form name="filters_form" action="#" method="get" class="block-header__filter">
+							<div class="filters-gender checkbox">
+								<h3 class="filters__title checkbox__text">Пол</h3>
+								<div class="checkbox__list">
+									<div class="checkbox__item">
+										<input class="checkbox__input" type="checkbox" id="gender_male" name="male" value="Male">
+										<label class="checkbox__label" for="gender_male"> Мужской </label>
+									</div>
+									<div class="checkbox__item">
+										<input class="checkbox__input" type="checkbox" id="gender_female" name="female" value="Female">
+										<label class="checkbox__label" for="gender_female"> Женский </label>
+									</div>
+								</div>
+							</div>
+							<div class="filters-price">
+								<h3 class="filters__title">Цена</h3>
+								<div id="range" class="filters-price__slider"></div>
+								<div class="filters-price__inputs">
+									<label class="filters-price__label">
+										<span class="filters-price__text">от</span>
+										<input class="filters-price__input" type="number" min="0" max="200000" placeholder="0" id="price-start">
+										<span class="filters-price__text">&#36;</span>
+									</label>
+									<label class="filters-price__label">
+										<span class="filters-price__text">до</span>
+										<input class="filters-price__input" type="number" min="0" max="200000" placeholder="200000" id="price-end">
+										<span class="filters-price__text">&#36;</span>
+									</label>
+								</div>
+							</div>
+							<button type="submit" class="filters-btn button button--transparent">
+								<span>Подобрать</span>
+							</button>
+						</form>
 					</div>
 					<div class="product__body">
 						<div class="product__carts">
@@ -75,7 +107,10 @@
 									<div class="cart-product__info">
 										<div>
 											<p class="cart-product__title"><a href="#">Ponochka Marvet</a></p>
-											<div class="cart-product__prise">&#36;250</div>
+											<div class="cart-product__prise">
+												&#36;
+												<span id="count">250</span>
+											</div>
 										</div>
 										<div class="cart-product__details">
 											<div class="cart-product__details-code tooltip">
@@ -275,7 +310,23 @@
 								</div>
 							</article>
 						</div>
-						<button class="product__button button"><span>explore</span></button>
+						<div class="pagination">
+							<a href="#" class="pagination__arrow pagination__arrow--prew pagination__arrow--disabled">
+								<img class="pagination__arrow-icon" src="@img/button/arrow_r.svg" alt="arrow icon">
+							</a>
+							<ul class="pagination__list">
+								<li class="pagination__list-item">
+									<a href="#" class="pagination__list-num pagination__list-num--active">1</a>
+								</li>
+								<li class="pagination__list-item">
+									<a href="#" class="pagination__list-num">2</a>
+								</li>
+							</ul>
+							<a href="#" class="pagination__arrow">
+								<img class="pagination__arrow-icon" src="@img/button/arrow_r.svg" alt="arrow icon">
+							</a>
+						</div>
+<!--						<button class="product__button button"><span>explore</span></button>-->
 					</div>
 				</div>
 			</section>

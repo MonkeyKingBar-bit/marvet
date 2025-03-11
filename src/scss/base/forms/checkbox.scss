@@ -1,7 +1,10 @@
 .checkbox {
 	position: relative;
-	&:not(:last-child) {
-		margin-bottom: em(5);
+	&__item:not(:last-child) {
+		margin-bottom: toRem(20);
+		@media (max-width: $mobile) {
+			margin-bottom: 0;
+		}
 	}
 	// .checkbox__input
 	&__input {
@@ -13,7 +16,7 @@
 			box-shadow: 0 0 5px #000;
 		}
 		&:checked + .checkbox__label:before {
-			background: #000;
+			background: $orangeColor;
 		}
 	}
 	// .checkbox__label
@@ -22,9 +25,12 @@
 		display: inline-flex;
 		position: relative;
 		gap: 10px;
+		font-family: "Roboto", sans-serif;
+		//font-size: toRem(19);
+		@include adaptiveValue("font-size", 19, 16);
 		&:before {
 			content: "";
-			align-self: flex-start;
+			align-self: center;
 			flex: 0 0 20px;
 			width: 20px;
 			height: 20px;
