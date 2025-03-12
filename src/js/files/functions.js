@@ -428,7 +428,7 @@ export function menuInit() {
 				document.documentElement.classList.toggle("menu-open");
 			}
 		});
-	};
+	}
 }
 export function menuOpen() {
 	bodyLock();
@@ -738,3 +738,14 @@ export function dataMediaQueries(array, dataSetValue) {
 	}
 }
 //================================================================================================================================================================================================================================================================================================================
+export function menuFilter() {
+	const filter_form = document.querySelector('#filters_form');
+	const filter_btn = document.querySelector('#filter-button');
+	if (filter_btn) {
+		filter_btn.addEventListener('click', function (e) {
+			filter_form.classList.toggle("element-show");
+		})
+	}
+}
+
+menuFilter();
