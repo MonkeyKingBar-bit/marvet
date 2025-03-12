@@ -78,15 +78,11 @@
         }));
     }
     function menuFilter() {
-        if (document.querySelector("#filter-button")) {
-            const filter_form = document.querySelector(".block-header__filter");
-            document.addEventListener("click", (function(e) {
-                filter_form.style.display = filter_form.style.display === "flex" ? "none" : "flex";
-            }));
-            document.querySelector(".filters-btn").addEventListener("click", (function() {
-                filter_form.style.display = "none";
-            }));
-        }
+        const filter_form = document.querySelector("#filters_form");
+        const filter_btn = document.querySelector("#filter-button");
+        if (filter_btn) filter_btn.addEventListener("click", (function(e) {
+            filter_form.classList.toggle("element-show");
+        }));
     }
     menuFilter();
     let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {

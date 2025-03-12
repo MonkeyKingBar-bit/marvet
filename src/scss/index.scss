@@ -552,7 +552,6 @@
       &__title {
         @include adaptiveValue("font-size", 48, 24);
         letter-spacing: toRem(0.13);
-        //line-height: toRem(68);
         @include adaptiveValue("line-height", 68, 34);
         color: #0F173D;
         @include adaptiveValue("max-width", 764, 290);
@@ -569,16 +568,7 @@
         font-family: "Rubik", sans-serif;
         font-size: toRem(19);
         color: $darkTurquoiseColor;
-        /* Chrome, Safari, Edge, Opera */
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-        }
-        /* Firefox */
-        input[type=number] {
-          -moz-appearance: textfield;
-        }
+
         @media (max-width: $mobile) {
           display: none;
           flex-wrap: wrap;
@@ -614,6 +604,16 @@
             border-right: 1px #EDEDED solid;
             border-left: 1px #EDEDED solid;
             padding: 0 toRem(23);
+            /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            /* Firefox */
+            input[type=number] {
+              -moz-appearance: textfield;
+            }
             @media (max-width: $mobile) {
               border-top: 1px #EDEDED solid;
               border-bottom: 1px #EDEDED solid;
@@ -680,7 +680,9 @@
         @include adaptiveValue("margin-bottom", 48, 20);
       }
     }
-
+    .element-show {
+      display: flex;
+    }
     // .product__body
     &__body {
       display: grid;
@@ -980,3 +982,4 @@
     }
   }
 }
+

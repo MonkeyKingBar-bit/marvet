@@ -1223,14 +1223,6 @@ textarea.input {
   font-size: 1.1875rem;
   color: #124c5f
 }
-.catalogue.product .block-header__filter input::-webkit-inner-spin-button,
-.catalogue.product .block-header__filter input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0
-}
-.catalogue.product .block-header__filter input[type=number] {
-  -moz-appearance: textfield
-}
 .catalogue.product .block-header__filter .filters__title {
   margin-bottom: .9375rem;
   font-size: 1.1875rem;
@@ -1252,6 +1244,14 @@ textarea.input {
   border-right: 1px #ededed solid;
   border-left: 1px #ededed solid;
   padding: 0 1.4375rem
+}
+.catalogue.product .block-header__filter .filters-price input::-webkit-inner-spin-button,
+.catalogue.product .block-header__filter .filters-price input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0
+}
+.catalogue.product .block-header__filter .filters-price input[type=number] {
+  -moz-appearance: textfield
 }
 .catalogue.product .block-header__filter .filters-price__slider {
   margin-bottom: 1.25rem
@@ -1293,6 +1293,9 @@ textarea.input {
 }
 .catalogue.product .block-header__filter .filters-btn.button::before {
   background: #fa0
+}
+.catalogue.product .element-show {
+  display: flex
 }
 .catalogue.product__body {
   display: grid
