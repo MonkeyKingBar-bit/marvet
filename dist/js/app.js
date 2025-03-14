@@ -81,7 +81,7 @@
         const filter_form = document.querySelector("#filters_form");
         const filter_btn = document.querySelector("#filter-button");
         if (filter_btn) filter_btn.addEventListener("click", (function(e) {
-            filter_form.classList.toggle("element-show");
+            filter_form.classList.toggle("element-hidden");
         }));
     }
     menuFilter();

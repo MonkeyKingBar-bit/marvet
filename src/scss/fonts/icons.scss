@@ -14,6 +14,9 @@
 		display: block;
 	}
 }
+._icon-vk:before {
+	content: "\e901";
+}
 ._icon-tiktok:before {
 	content: "\e900";
 }
@@ -31,9 +34,6 @@
 }
 ._icon-shape:before {
 	content: "\e908";
-}
-._icon-s-twitter:before {
-	content: "\e90a";
 }
 ._icon-video:before {
 	content: "\e90b";

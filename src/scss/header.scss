@@ -22,7 +22,7 @@
 
     ._header-scroll & {
       @include adaptiveValue("min-height", 100, 65);
-      color: $mainColor;
+      color: $whiteColor;
     }
 
     @media (max-width: $mobile) {

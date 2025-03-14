@@ -570,7 +570,6 @@
         color: $darkTurquoiseColor;
 
         @media (max-width: $mobile) {
-          display: none;
           flex-wrap: wrap;
           align-items: start;
           justify-content: space-around;
@@ -680,8 +679,10 @@
         @include adaptiveValue("margin-bottom", 48, 20);
       }
     }
-    .element-show {
-      display: flex;
+    @media (max-width: $mobile) {
+      .element-hidden {
+        display: none;
+      }
     }
     // .product__body
     &__body {
