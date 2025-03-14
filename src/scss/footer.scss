@@ -110,14 +110,14 @@
       content: "";
       @include adaptiveValue("left", 0, -30);
       @include adaptiveValue("top", -80, -160);
-      background: url("img/bg/subs_decor1.svg") left top / 100% no-repeat;
+      background: url("@img/bg/subs_decor1.svg") left top / 100% no-repeat;
     }
     &::after{
       content: "";
       //right: toRem(240);
       @include adaptiveValue("right", 240, 25);
       @include adaptiveValue("bottom", -115, 25);
-      background: url("img/bg/subs_decor1.svg") right bottom / 100% no-repeat;
+      background: url("@img/bg/subs_decor1.svg") right bottom / 100% no-repeat;
       transform: rotate(-137deg);
     }
   }
@@ -229,6 +229,14 @@
     position: relative;
     border-radius: 100%;
 
+    &-vk {
+      width: 100%;
+      height: 30px;
+      &:hover {
+        background-color: transparent;
+        fill: $darkTurquoiseColor;
+      }
+    }
     @media (any-hover: hover) {
       &:hover {
         background-color: transparent;
