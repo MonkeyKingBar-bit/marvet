@@ -553,7 +553,7 @@
         @include adaptiveValue("font-size", 48, 24);
         letter-spacing: toRem(0.13);
         @include adaptiveValue("line-height", 68, 34);
-        color: #0F173D;
+        color: $titleColor;
         @include adaptiveValue("max-width", 764, 290);
       }
       &__filter {
@@ -984,3 +984,178 @@
   }
 }
 
+//==============gallery======================================================================================
+
+.gallery {
+  @include adaptiveValue("padding-top", 90, 40);
+  @include adaptiveValue("padding-bottom", 90, 20);
+  &-header {
+    @include adaptiveValue("padding-bottom", 50, 0);
+    font-family: "Pangolin", sans-serif;
+    font-size: toRem(48);
+    line-height: toRem(68);
+    letter-spacing: toRem(0.13);
+    color: $titleColor;
+  }
+  &__carts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    row-gap: toRem(98);
+  }
+  &__cart {
+    width: 100%;
+    background-color: #F4FFFF;
+    display: flex;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  // .gallery__container
+  &__container {
+    flex: 0 100%;
+  }
+  // .gallery__body
+  &__body {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: toRem(231);
+    }
+    &::after{
+      content: "";
+      right: 0;
+      bottom: 0;
+      background: url("@img/bg/gallery_decor.svg") right center / 120% no-repeat;
+    }
+    @media (max-width: $tablet) {
+      &::after {
+        background: transparent;
+      }
+    }
+
+    &-img {
+      flex: 60% 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url("../img/bg/cat_w_section.png");
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      @media (max-width: $tablet) {
+        background: transparent;
+        @include adaptiveValue("padding-left", 2, 15);
+        @include adaptiveValue("padding-right", 2, 15);
+      }
+    }
+    &-content {
+      @include adaptiveValue("padding-top", 60, 20);
+      @include adaptiveValue("padding-bottom", 60, 10);
+      @include adaptiveValue("padding-right", 122, 0);
+      @include adaptiveValue("padding-left", 122, 0);
+      @media (max-width: $tablet) {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      &:not(:last-child) {
+        margin-bottom: toRem(40);
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        .gallery__picture {
+          transform: scale(1.02);
+        }
+      }
+    }
+  }
+  // .gallery__picture
+  &__picture {
+    transition: transform 0.3s ease 0s;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 50, 20);
+    }
+  }
+  // .gallery__img
+  &__img {
+    aspect-ratio: 1 / 1;
+    border-radius: toRem(10);
+    height: toRem(435);
+    @media (max-width: $tablet) {
+      height: 100%;
+    }
+  }
+  // .gallery__title
+  &__title {
+    font-family: "Pacifico", sans-serif;
+    line-height: toRem(74);
+    @include adaptiveValue("line-height", 74, 20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: toRem(10);
+    @include adaptiveValue("font-size", 58, 24);
+    color: #094067;
+    transition: color 0.3s ease 0s;
+    @include adaptiveValue("margin-bottom", 25, 12);
+
+    @media (max-width: $tablet) {
+      display: flex;
+      justify-content: center;
+    }
+
+    &::before {
+      font-size: toRem(20);
+      transition: transform 0.3s ease 0s;
+    }
+  }
+  &__description, &__details {
+    @include adaptiveValue("font-size", 19, 14);
+    @include adaptiveValue("line-height", 32, 20);
+    color: #4E616D;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &__details {
+    font-weight: bold;
+    margin: toRem(16) 0;
+    @media (max-width: $tablet) {
+      display: flex;
+      align-items: center;
+    }
+    @media (max-width: $mobileMedium) {
+      align-items: flex-start;
+    }
+    &-title {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: toRem(10);
+    }
+    &-text {
+      font-weight: normal;
+    }
+    &-button {
+      border: none !important;
+      color: inherit !important;
+      padding: 0 !important;
+      background: transparent !important;
+    }
+  }
+  &__button {
+    &.button {
+      @include adaptiveValue("padding-top", 20, 12);
+      @include adaptiveValue("padding-bottom", 20, 12);
+      @include adaptiveValue("font-size", 16, 12);
+    }
+  }
+}
