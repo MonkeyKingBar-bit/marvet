@@ -66,6 +66,7 @@
     @media (max-width: $mobile) {
       flex-direction: column;
       row-gap: toRem(35);
+      color: $mainColor;
     }
   }
   // .menu__item
