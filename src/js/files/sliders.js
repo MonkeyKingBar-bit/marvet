@@ -19,6 +19,8 @@ EffectFade, Lazy, Manipulation
 // Стилі Swiper
 // Базові стилі
 import "../../scss/base/swiper.scss";
+import "../../scss/base/slick.scss";
+// import {thumbnailsSettings} from "lightgallery/plugins/thumbnail/lg-thumbnail-settings.js";
 // Повний набір стилів з scss/libs/swiper.scss
 // import "../../scss/libs/swiper.scss";
 // Повний набір стилів з node_modules
@@ -312,6 +314,28 @@ function initSliders() {
     // mainSlider.controller.control = mainSlider;
     // miniSlider.controller.control = mainSlider;
   }
+
+  // if(document.querySelector(".details-slider")) {
+  //   const thumbsDetailsSlider = new Swiper ('.details-thumbs', {
+  //     slidesPerView: 5,
+  //     spaceBetween: 10,
+  //     centeredSlides: true,
+  //     loop: true,
+  //     slideToClickedSlide: true,
+  //   });
+  //   const mainDetailsSlider = new Swiper ('.details-slider', {
+  //     slidesPerView: 1,
+  //     spaceBetween: 10,
+  //     centeredSlides: true,
+  //     loop: true,
+  //     loopedSlides: 6,
+  //     navigation: {
+  //       nextEl: '.swiper-button-next',
+  //       prevEl: '.swiper-button-prev',
+  //     },
+  //     asNavFor: thumbsDetailsSlider
+  //   });
+  // }
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
@@ -349,3 +373,49 @@ window.addEventListener("load", function (e) {
   // Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
   //initSlidersScroll();
 });
+
+$(document).ready(function () {
+  $('.slider').slick( {
+    arrows: true,
+    adaptiveHeight: true,
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    speed: 100,
+    easing: 'linear',
+    infinity: false,
+    initialSlide: 0,
+    // autoplay: false,
+    // autoplaySpeed: 1500,
+    pauseOnFocus: true,
+    pauseOnHover: true,
+    pauseOnDotsHover: true,
+    draggable: false,
+    touchThreshold: 10,
+    rows: 1,
+    slidesPerRow: 1,
+    centerMode: true,
+    variableWidth: true,
+    asNavFor: '.sliderbig',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+
+        }
+      }
+    ],
+    // mobileFirst: true,
+  });
+  $('.sliderbig').slick({
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider'
+  });
+})
