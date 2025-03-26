@@ -4,9 +4,7 @@
 .slick-slider.slick-initialized{}
 
 /* Обмежувальна оболонка */
-.slick-list {
-  overflow: hidden;
-}
+
 
 /* Стрічка слайдів */
 .slick-track{
@@ -17,6 +15,9 @@
 .slider {
   position: relative;
   padding: 0 60px;
+  .slick-list {
+    overflow: hidden;
+  }
   .slick-arrow {
     position: absolute;
     top: 50%;
@@ -59,17 +60,28 @@
     }
   }
   &__item {
+    padding: 0 15px;
     transition: all 0.3s ease 0s;
     opacity: 0.4;
     text-align: center;
+    //height: toRem(519);
     &.slick-center {
       opacity: 1;
+    }
+    img {
+      height: 100px;
+      border-radius: 15px;
     }
   }
 }
 
 .sliderbig {
+  margin-bottom: 30px;
   &__item {
     text-align: center;
+    img {
+      height: 419px;
+      border-radius: 15px;
+    }
   }
 }

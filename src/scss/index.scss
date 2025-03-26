@@ -1114,7 +1114,7 @@
     @include adaptiveValue("font-size", 58, 24);
     color: #094067;
     transition: color 0.3s ease 0s;
-    @include adaptiveValue("margin-bottom", 25, 12);
+    @include adaptiveValue("margin-bottom", 38, 12);
 
     @media (max-width: $tablet) {
       display: flex;
@@ -1174,76 +1174,34 @@
   margin-top: toRem(40);
   margin-bottom: toRem(70);
   &__content {
-    //padding-top: toRem(50);
-    //display: flex;
-    //flex-direction: row;
-    //justify-content: space-between;
-    //align-items: center;
-    ////flex-wrap: wrap;
-    //column-count:2;
-    //column-gap: toRem(56);
+    padding-top: toRem(50);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: toRem(56);
 
+  }
+  &__slider, &__body {
+    min-width: 0;
+    width: 50%;
   }
   &__slider {
-    //min-width: 0;
-  }
-  //メインスライド
-  &-slider {
-    width: 100%;
-    height: auto;
-    margin: 0 0 10px 0;
-
-    .swiper-slide {
-      width: auto;
-      height: 400px;
-
-      img {
-        display: block;
-        width: auto;
-        height: 100%;
-        margin: 0 auto;
-      }
-    }
-  }
-  //サムネイルスライド
-  &-thumbs {
-    width: 100%;
-    padding: 0;
-    overflow: hidden;
-
-    .swiper-slide {;
-      width: 100px;
-      height: 100px;
-      text-align: center;
-      overflow: hidden;
-      opacity: .1;
-
-      &-active {
-        opacity: 1;
-      }
-
-      img {
-        width: auto;
-        height: 100%;
-      }
-    }
+    z-index: 10;
   }
   &__body {
-    //flex: 1 0;
-    //width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   &__list {
-    display: flex;
-    //flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: toRem(25);
+    display: grid;
     margin-top: toRem(40);
     &-items {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
+      display: grid;
+      grid-template-columns: auto auto auto auto ;
+      grid-template-rows: auto;
+      gap: toRem(25);
       font-size: toRem(16);
       line-height: toRem(32);
     }
@@ -1259,6 +1217,15 @@
         letter-spacing: toRem(0.13);
         color: #4E616D;
       }
+    }
+  }
+  &-description {
+    line-height: toRem(24);
+    color: #170C04;
+  }
+  .exhibitions {
+    &__content {
+      border-bottom: 4px solid #3A8DA8;
     }
   }
 }

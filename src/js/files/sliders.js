@@ -379,7 +379,7 @@ $(document).ready(function () {
     arrows: true,
     adaptiveHeight: true,
     dots: true,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 3,
     speed: 100,
     easing: 'linear',
