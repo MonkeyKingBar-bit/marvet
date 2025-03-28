@@ -22,19 +22,28 @@
 	*/
 
 	//Від кого лист
-	$mail->setFrom('from@gmail.com', 'Фрілансер по життю'); // Вказати потрібний E-mail
+	$mail->setFrom('marvet@gmail.com', 'Professional cattery Marvet'); // Вказати потрібний E-mail
 	//Кому відправити
-	$mail->addAddress('to@gmail.com'); // Вказати потрібний E-mail
+	$mail->addAddress('kateiiverem@gmail.com'); // Вказати потрібний E-mail
 	//Тема листа
-	$mail->Subject = 'Вітання! Це "Фрілансер по життю"';
+	$mail->Subject = 'Hi! It is a professional cattery Marvet.';
 
 	//Тіло листа
-	$body = '<h1>Зустрічайте супер листа!</h1>';
+	$body = '<h1>Thanks for attention!</h1>';
 
-	//if(trim(!empty($_POST['email']))){
-		//$body.=$_POST['email'];
-	//}	
-	
+	if(trim(!empty($_POST['email']))){
+		$body.=$_POST['form[email]'];
+	}
+    if(trim(!empty($_POST['form[name]']))){
+        $body.=$_POST['form[name]'];
+	}
+    if(trim(!empty($_POST['form[tel]']))){
+        $body.=$_POST['form[tel]'];
+	}
+    if(trim(!empty($_POST['form[question]']))){
+        $body.=$_POST['form[question]'];
+	}
+
 	/*
 	//Прикріпити файл
 	if (!empty($_FILES['image']['tmp_name'])) {
@@ -53,9 +62,9 @@
 
 	//Відправляємо
 	if (!$mail->send()) {
-		$message = 'Помилка';
+		$message = 'Error: ' . $mail->ErrorInfo;
 	} else {
-		$message = 'Дані надіслані!';
+		$message = 'Data send successfully!';
 	}
 
 	$response = ['message' => $message];

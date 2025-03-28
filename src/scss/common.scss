@@ -39,15 +39,18 @@
     font-family: "Rubik", sans-serif;
     color: $whiteColor;
     column-gap: toRem(20);
-    @include adaptiveValue("padding-top", 20, 7);
-    @include adaptiveValue("padding-bottom", 20, 7);
-    @include adaptiveValue("padding-right", 43, 7);
-    @include adaptiveValue("padding-left", 43, 7);
+    &.button {
+      @include adaptiveValue("padding-top", 20, 7);
+      @include adaptiveValue("padding-bottom", 20, 7);
+      @include adaptiveValue("padding-right", 43, 7);
+      @include adaptiveValue("padding-left", 43, 7);
+      @include adaptiveValue("font-size", 16, 12);
+    }
 
     @media (max-width: $mobileMedium) {
       justify-content: center;
       align-items: center;
-      font-size: toRem(12);
+      //font-size: toRem(12);
       column-gap: toRem(10);
 
       svg {

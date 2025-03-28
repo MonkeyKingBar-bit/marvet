@@ -66,10 +66,13 @@
     @media (max-width: toRem(1570)) {
       align-items: start;
     }
+    //@media (max-width: toRem(320)) {
+    //  transform: translate(-85%, -50%);
+    //}
   }
   &__title {
     font-family: "Pangolin", cursive;
-    @include adaptiveValue("font-size", 70, 18);
+    @include adaptiveValue("font-size", 75, 18);
     line-height: 1;
     color: $whiteColor;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
@@ -90,15 +93,18 @@
     font-family: "Pacifico", cursive;
     text-transform: uppercase;
     column-gap: toRem(20);
-    @include adaptiveValue("padding-top", 20, 7);
-    @include adaptiveValue("padding-bottom", 20, 7);
-    @include adaptiveValue("padding-right", 43, 7);
-    @include adaptiveValue("padding-left", 43, 7);
+    &.button {
+      @include adaptiveValue("padding-top", 20, 7);
+      @include adaptiveValue("padding-bottom", 20, 7);
+      @include adaptiveValue("padding-right", 43, 7);
+      @include adaptiveValue("padding-left", 43, 7);
+      @include adaptiveValue("font-size", 16, 11);
+    }
 
     @media (max-width: $mobileMedium) {
       justify-content: center;
       align-items: center;
-      font-size: toRem(11);
+      //font-size: toRem(11);
       column-gap: toRem(10);
       svg {
         height: toRem(12);
@@ -413,11 +419,6 @@
   }
   // .product__cart
   &__cart {
-    @media (max-width: toRem(662)) {
-      &:nth-child(2) {
-        @include adaptiveValue("margin-top", -150, -60);
-      }
-    }
   }
   // .product__button
   &__button {
@@ -425,6 +426,13 @@
     font-family: "Rubik", sans-serif;
     border-radius: toRem(24);
     padding: toRem(12) toRem(28);
+    &.button {
+      @include adaptiveValue("padding-top", 20, 12);
+      @include adaptiveValue("padding-bottom", 20, 12);
+      @include adaptiveValue("padding-right", 43, 28);
+      @include adaptiveValue("padding-left", 43, 28);
+      //@include adaptiveValue("font-size", 16, 12);
+    }
     &.button {
       &::before {
         background: $orangeColor;
