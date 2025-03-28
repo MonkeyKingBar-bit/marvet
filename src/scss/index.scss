@@ -1111,10 +1111,10 @@
     justify-content: space-between;
     align-items: center;
     gap: toRem(10);
-    @include adaptiveValue("font-size", 58, 24);
+    @include adaptiveValue("font-size", 58, 32);
     color: #094067;
     transition: color 0.3s ease 0s;
-    @include adaptiveValue("margin-bottom", 38, 12);
+    @include adaptiveValue("margin-bottom", 38, 16);
 
     @media (max-width: $tablet) {
       display: flex;
@@ -1172,19 +1172,25 @@
 //==============details======================================================================================
 .details {
   margin-top: toRem(40);
-  margin-bottom: toRem(70);
+  @include adaptiveValue("margin-bottom", 70, 45);
   &__content {
     padding-top: toRem(50);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    column-gap: toRem(56);
-
+    gap: toRem(56);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      padding: 0;
+    }
   }
   &__slider, &__body {
     min-width: 0;
     width: 50%;
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
   }
   &__slider {
     z-index: 10;
@@ -1195,14 +1201,15 @@
     flex-direction: column;
   }
   &__list {
+    width: 100%;
     display: grid;
-    margin-top: toRem(40);
+    @include adaptiveValue("margin-top", 40, 25);
     &-items {
       display: grid;
-      grid-template-columns: auto auto auto auto ;
-      grid-template-rows: auto;
-      gap: toRem(25);
-      font-size: toRem(16);
+      grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(5px, auto));
+      @include adaptiveValue("gap", 25, 5);
+      @include adaptiveValue("font-size", 16, 14);
       line-height: toRem(32);
     }
     &-item {
@@ -1222,10 +1229,56 @@
   &-description {
     line-height: toRem(24);
     color: #170C04;
+    max-width: toRem(876);
+    margin: 0 auto;
+    @include adaptiveValue("font-size", 16, 14);
   }
   .exhibitions {
     &__content {
-      border-bottom: 4px solid #3A8DA8;
+      text-align: center;
+      margin-bottom: toRem(25);
     }
+    &__title {
+      font-family: "Rubik", sans-serif;
+      font-weight: 500;
+      font-size: toRem(32);
+      color: #170C04;
+      margin-bottom: toRem(18);
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 60px 30px;
+      @include adaptiveValue("row-gap", 60, 15);
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-img {
+        border-radius: 20px;
+      }
+      &-title {
+        @include adaptiveValue("font-size", 25, 16);
+        margin-top: 25px;
+        margin-bottom: 0;
+      }
+      &-link {
+        background: transparent;
+        color: #FFAA00;
+      }
+    }
+    &__product {
+      border-top: 4px solid #3A8DA8;
+      .exhibitions__content {
+        margin-top: 46px;
+      }
+    }
+  }
+  & .product {
+    padding: 0;
+    background: transparent;
   }
 }

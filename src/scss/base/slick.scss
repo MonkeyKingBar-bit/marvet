@@ -1,11 +1,3 @@
-/* Слайдер */
-
-/* Слайдер запущений */
-.slick-slider.slick-initialized{}
-
-/* Обмежувальна оболонка */
-
-
 /* Стрічка слайдів */
 .slick-track{
   display: flex;
@@ -64,7 +56,6 @@
     transition: all 0.3s ease 0s;
     opacity: 0.4;
     text-align: center;
-    //height: toRem(519);
     &.slick-center {
       opacity: 1;
     }
