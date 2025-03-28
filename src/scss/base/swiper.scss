@@ -36,3 +36,32 @@
 .swiper-button-lock {
 	display: none !important;
 }
+
+.swiper-container {
+	width: 100%;
+	max-width: 940px;
+
+	//スライダー
+	&.slider {
+		height: 80vh;
+	}
+
+	//スライダーサムネイル
+	&.slider-thumbnail {
+		height: 20vh;
+
+		.swiper-wrapper {
+
+			.swiper-slide {
+				width: 25%;
+				height: 100%;
+				opacity: .5;
+				overflow: hidden;
+
+				&.swiper-slide-thumb-active {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

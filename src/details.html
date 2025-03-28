@@ -4,9 +4,10 @@
 	<title>Marvet</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-<!--	 <style>body{opacity: 0;}</style>-->
+	<!-- <style>body{opacity: 0;}</style> -->
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 	 <meta name="robots" content="noindex, nofollow">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -48,202 +49,276 @@
 				</ul>
 			</div>
 		</header>
-		<main class="page">
-			<section class="page__gallery gallery">
-				<div class="product__content block-header block-header--center gallery-header">
-					<h2 class="block-header__title">
-						Наши <span>кошки</span>
-					</h2>
+		<main class="page details">
+			<section class="details page__details">
+				<div class="details__container">
+					<div class="details__content">
+						<div class="details__slider">
+							<div class="sliderbig">
+								<div class="sliderbig__item">
+									<img class="ibg" data-lazy="@img/details/first.jpg" alt="Image">
+								</div>
+								<div class="sliderbig__item">
+									<img class="ibg" data-lazy="@img/details/second.jpg" alt="Image">
+								</div>
+								<div class="sliderbig__item">
+									<img class="ibg" data-lazy="@img/details/third.jpg" alt="Image">
+								</div>
+								<div class="sliderbig__item">
+									<img class="ibg" data-lazy="@img/details/fourth.jpg" alt="Image">
+								</div>
+								<div class="sliderbig__item">
+									<img class="ibg" data-lazy="@img/details/fifth.jpg" alt="Image">
+								</div>
+								<div class="sliderbig__item">
+									<img class="ibg" data-lazy="@img/details/six.jpg" alt="Image">
+								</div>
+							</div>
+							<div class="slider">
+								<div class="slider__item">
+									<img data-lazy="@img/details/first.jpg" alt="Image">
+								</div>
+								<div class="slider__item">
+									<img class="ibg" data-lazy="@img/details/second.jpg" alt="Image">
+								</div>
+								<div class="slider__item">
+									<img class="ibg" data-lazy="@img/details/third.jpg" alt="Image">
+								</div>
+								<div class="slider__item">
+									<img class="ibg" data-lazy="@img/details/fourth.jpg" alt="Image">
+								</div>
+								<div class="slider__item">
+									<img class="ibg" data-lazy="@img/details/fifth.jpg" alt="Image">
+								</div>
+								<div class="slider__item">
+									<img class="ibg" data-lazy="@img/details/six.jpg" alt="Image">
+								</div>
+							</div>
+						</div>
+						<div class="details__body">
+							<h3 class="gallery__title">Yukki Marvet</h3>
+							<p class="gallery__description">
+								Ум и сообразительность этого кота поражают, он быстро осваивает трюки и легко
+								адаптируется к различным бытовым условиям, благодаря чему становится идеальным
+								компаньоном для семей с детьми и пожилых людей. Несмотря на игривую натуру,
+								он ценит моменты спокойствия, часто наблюдая за миром с окна.
+							</p>
+							<div class="details__list">
+								<div class="details__list-items">
+									<div class="details__list-item"><span>Взрослый</span></div>
+									<div class="details__list-item"><span>Male e 24 03</span></div>
+									<div class="details__list-item"><span>31/07/2020</span></div>
+									<div class="details__list-item"><span>Кот</span></div>
+									<div class="details__list-item">
+										<div class="details__list-item-block">
+											<p class="details__list-item-title">Титул</p>
+											<span>WCF Triple Master</span>
+										</div>
+									</div>
+									<div class="details__list-item">
+										<div class="details__list-item-block">
+											<p class="details__list-item-title">Заводчик</p>
+											<span>Наталья Коваль</span>
+										</div>
+									</div>
+									<div class="details__list-item">
+										<div class="details__list-item-block">
+											<p class="details__list-item-title">Окрас</p>
+											<span>Кремовый, пятнистый</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="gallery__carts cat_w">
-					<article class="gallery__cart">
-						<div class="gallery__body-img">
-							<div class="gallery__picture">
-								<img class="gallery__img ibg" src="@img/gallery/two.jpg" alt="animals">
-							</div>
-						</div>
-						<div class="gallery__container">
-							<div class="gallery__body">
-								<div class="gallery__body-content">
-									<div>
-										<h3 class="gallery__title">Skazka Marvet</h3>
-										<p class="gallery__description">
-											Девочка с потрясающей головой, крепким костяком, хорошим прикусом, длинным корректным
-											хвостиком и шоу темпераментом
-										</p>
+			</section>
+			<section class="details__exhibitions exhibitions">
+				<div class="exhibitions__container">
+					<div class="exhibitions__content">
+						<h2 class="exhibitions__title">
+							Выставки
+						</h2>
+						<p class="details-description">
+							Мы тщательно подготавливаем наших четвероногих друзей к каждому мероприятию: от регулярных
+							тренировок и ухаживания за шерстью до разработки питания, способствующего поддержанию их
+							здоровья и энергии.
+						</p>
+					</div>
+					<ul class="exhibitions__list">
+						<li class="exhibitions__list-item exhibitions__item">
+							<img class="exhibitions__item-img ibg" src="@img/details/exhibit.png" alt="exhibitions image">
+							<h3 class="exhibitions__item-title exhibitions__title">Международная выставка кошек</h3>
+							<a class="exhibitions__item-link button button--transparent" href="#">
+								<span>Золотой Гран-При 2020</span>
+							</a>
+						</li>
+						<li class="exhibitions__list-item exhibitions__item">
+							<img class="exhibitions__item-img ibg" src="@img/details/exhibit.png" alt="exhibitions image">
+							<h3 class="exhibitions__item-title exhibitions__title">Международная выставка кошек</h3>
+							<a class="exhibitions__item-link button button--transparent" href="#">
+								<span>Золотой Гран-При 2020</span>
+							</a>
+						</li>
+						<li class="exhibitions__list-item exhibitions__item">
+							<img class="exhibitions__item-img ibg" src="@img/details/exhibit.png" alt="exhibitions image">
+							<h3 class="exhibitions__item-title exhibitions__title">Международная выставка кошек</h3>
+							<a class="exhibitions__item-link button button--transparent" href="#">
+								<span>Золотой Гран-При 2020</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="catalogue page__product product">
+				<div class="product__container exhibitions__product">
+					<div class="exhibitions__content">
+						<h2 class="exhibitions__title">
+							Дети
+						</h2>
+						<p class="details-description">
+							Особое внимание уделяется не только производителям, но и их очаровательным котятам, которые
+							становятся настоящей гордостью нашей деятельности.
+						</p>
+					</div>
+					<div class="product__body">
+						<div class="product__carts">
+							<article class="product__cart cart-product">
+								<div class="cart-product__picture">
+									<div class="cart-product__image">
+										<img class="cart-product__img ibg" src="@img/carts/cat1.png" alt="cat 1">
 									</div>
-									<div>
-										<div class="gallery__details">
-											<p class="gallery__details-title">
-												Классификация:
-												<span class="gallery__details-text">Female fs 24 03 SFL</span>
-											</p>
-											<p class="gallery__details-title">
-												Отец:
-												<a class="gallery__details-button button button--transparent" href="#">
-													<span class="gallery__details-text">WCF Master, Pearl Master O'Kay Yudjin Marycat</span>
-												</a>
-											</p>
-											<p class="gallery__details-title">
-												Мать:
-												<a class="gallery__details-button button button--transparent" href="#">
-													<span class="gallery__details-text">Kindlycats Julietta</span>
-												</a>
-											</p>
-											<p class="gallery__details-title">
-												Заводчик:
-												<span class="gallery__details-text"> Коваль Наталья Петровна</span>
-											</p>
+									<button class="cart-product__button button" type="button"><span>Выбрать</span></button>
+								</div>
+								<div class="cart-product__content">
+									<div class="cart-product__info">
+										<div>
+											<p class="cart-product__title"><a href="#">Ponochka Marvet</a></p>
+											<div class="cart-product__prise">
+												&#36;
+												<span id="count">250</span>
+											</div>
 										</div>
-										<a class="gallery__button button button--transparent" href="details.html">
-											<span>Достижения</span>
-										</a>
+										<div class="cart-product__details">
+											<div class="cart-product__details-code tooltip">
+												<p>SFS 71 ns 22</p>
+												<span class="tooltiptext">прямоухий шотландец мраморного окраса</span>
+											</div>
+											<p class="cart-product__details-gender">Female</p>
+										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-					</article>
-					<article class="gallery__cart">
-						<div class="gallery__body-img">
-							<div class="gallery__picture">
-								<img class="gallery__img ibg" src="@img/gallery/two.jpg" alt="animals">
-							</div>
-						</div>
-						<div class="gallery__container">
-							<div class="gallery__body">
-								<div class="gallery__body-content">
-									<div>
-										<h3 class="gallery__title">Skazka Marvet</h3>
-										<p class="gallery__description">
-											Девочка с потрясающей головой, крепким костяком, хорошим прикусом, длинным корректным
-											хвостиком и шоу темпераментом
-										</p>
+							</article>
+							<article class="product__cart cart-product">
+								<div class="cart-product__picture">
+									<div class="cart-product__image">
+										<img class="cart-product__img ibg" src="@img/carts/cat3.png" alt="cat 3">
 									</div>
-									<div>
-										<div class="gallery__details">
-											<p class="gallery__details-title">
-												Классификация:
-												<span class="gallery__details-text">Female fs 24 03 SFL</span>
-											</p>
-											<p class="gallery__details-title">
-												Отец:
-												<a class="gallery__details-button button button--transparent" href="#">
-													<span class="gallery__details-text">WCF Master, Pearl Master O'Kay Yudjin Marycat</span>
-												</a>
-											</p>
-											<p class="gallery__details-title">
-												Мать:
-												<a class="gallery__details-button button button--transparent" href="#">
-													<span class="gallery__details-text">Kindlycats Julietta</span>
-												</a>
-											</p>
-											<p class="gallery__details-title">
-												Заводчик:
-												<span class="gallery__details-text"> Коваль Наталья Петровна</span>
-											</p>
+									<button class="cart-product__button button" type="button"><span>Выбрать</span></button>
+								</div>
+								<div class="cart-product__content">
+									<div class="cart-product__info">
+										<div>
+											<p class="cart-product__title"><a href="#">Teddy Marvet</a></p>
+											<div class="cart-product__prise">&#36;180</div>
 										</div>
-										<a class="gallery__button button button--transparent" href="#">
-											<span>Достижения</span>
-										</a>
+										<div class="cart-product__details">
+											<div class="cart-product__details-code tooltip">
+												<p>SFL ns 21 02</p>
+												<span class="tooltiptext">вислоухий шотландец с окрасом арлекин и агути фактор</span>
+											</div>
+											<p class="cart-product__details-gender">Male</p>
+										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-					</article>
-					<article class="gallery__cart">
-						<div class="gallery__body-img">
-							<div class="gallery__picture">
-								<img class="gallery__img ibg" src="@img/gallery/two.jpg" alt="animals">
-							</div>
-						</div>
-						<div class="gallery__container">
-							<div class="gallery__body">
-								<div class="gallery__body-content">
-									<div>
-										<h3 class="gallery__title">Skazka Marvet</h3>
-										<p class="gallery__description">
-											Девочка с потрясающей головой, крепким костяком, хорошим прикусом, длинным корректным
-											хвостиком и шоу темпераментом
-										</p>
+							</article>
+							<article class="product__cart cart-product">
+								<div class="cart-product__picture">
+									<div class="cart-product__image">
+										<img class="cart-product__img ibg" src="@img/carts/cat6.png" alt="cat 3">
 									</div>
-									<div>
-										<div class="gallery__details">
-											<p class="gallery__details-title">
-												Классификация:
-												<span class="gallery__details-text">Female fs 24 03 SFL</span>
-											</p>
-											<p class="gallery__details-title">
-												Отец:
-												<a class="gallery__details-button button button--transparent" href="#">
-													<span class="gallery__details-text">WCF Master, Pearl Master O'Kay Yudjin Marycat</span>
-												</a>
-											</p>
-											<p class="gallery__details-title">
-												Мать:
-												<a class="gallery__details-button button button--transparent" href="#">
-													<span class="gallery__details-text">Kindlycats Julietta</span>
-												</a>
-											</p>
-											<p class="gallery__details-title">
-												Заводчик:
-												<span class="gallery__details-text"> Коваль Наталья Петровна</span>
-											</p>
+									<button class="cart-product__button button" type="button"><span>Выбрать</span></button>
+								</div>
+								<div class="cart-product__content">
+									<div class="cart-product__info">
+										<div>
+											<p class="cart-product__title"><a href="#">Kitten Marvet</a></p>
+											<div class="cart-product__prise">&#36;180</div>
 										</div>
-										<a class="gallery__button button button--transparent" href="#">
-											<span>Достижения</span>
-										</a>
+										<div class="cart-product__details">
+											<div class="cart-product__details-code tooltip">
+												<p>SFL 71 d 21 02</p>
+												<span class="tooltiptext">вислоухий шотландец с окрасом арлекин и агути фактор</span>
+											</div>
+											<p class="cart-product__details-gender">Male</p>
+										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-					</article>
-					<article class="gallery__cart">
-						<div class="gallery__body-img">
-							<div class="gallery__picture">
-								<img class="gallery__img ibg" src="@img/gallery/two.jpg" alt="animals">
-							</div>
-						</div>
-						<div class="gallery__container">
-							<div class="gallery__body">
-								<div class="gallery__body-content">
-									<div>
-										<h3 class="gallery__title">Skazka Marvet</h3>
-										<p class="gallery__description">
-											Девочка с потрясающей головой, крепким костяком, хорошим прикусом, длинным корректным
-											хвостиком и шоу темпераментом
-										</p>
+							</article>
+							<article class="product__cart cart-product">
+								<div class="cart-product__picture">
+									<div class="cart-product__image">
+										<img class="cart-product__img ibg" src="@img/carts/cat4.png" alt="cat">
 									</div>
-									<div>
-										<div class="gallery__details">
-											<p class="gallery__details-title">
-												Классификация:
-												<span class="gallery__details-text">Female fs 24 03 SFL</span>
-											</p>
-											<p class="gallery__details-title">
-												Отец:
-												<a class="gallery__details-button button button--transparent" href="#">
-													<span class="gallery__details-text">WCF Master, Pearl Master O'Kay Yudjin Marycat</span>
-												</a>
-											</p>
-											<p class="gallery__details-title">
-												Мать:
-												<a class="gallery__details-button button button--transparent" href="#">
-													<span class="gallery__details-text">Kindlycats Julietta</span>
-												</a>
-											</p>
-											<p class="gallery__details-title">
-												Заводчик:
-												<span class="gallery__details-text"> Коваль Наталья Петровна</span>
-											</p>
+									<button class="cart-product__button button" type="button"><span>Выбрать</span></button>
+								</div>
+								<div class="cart-product__content">
+									<div class="cart-product__info">
+										<div>
+											<p class="cart-product__title"><a href="#">Ponochka Marvet</a></p>
+											<div class="cart-product__prise">&#36;779</div>
 										</div>
-										<a class="gallery__button button button--transparent" href="#">
-											<span>Достижения</span>
-										</a>
+										<div class="cart-product__details">
+											<div class="cart-product__details-code tooltip">
+												<p>SFL 71 f 22 03</p>
+												<span class="tooltiptext">прямоухий шотландец окраса ван</span>
+											</div>
+											<p class="cart-product__details-gender">Female</p>
+										</div>
 									</div>
 								</div>
-							</div>
+							</article>
+							<article class="product__cart cart-product">
+								<div class="cart-product__picture">
+									<div class="cart-product__image">
+										<img class="cart-product__img ibg" src="@img/carts/cat6.png" alt="cat 3">
+									</div>
+									<button class="cart-product__button button" type="button"><span>Выбрать</span></button>
+								</div>
+								<div class="cart-product__content">
+									<div class="cart-product__info">
+										<div>
+											<p class="cart-product__title"><a href="#">Beauti Marvet</a></p>
+											<div class="cart-product__prise">&#36;180</div>
+										</div>
+										<div class="cart-product__details">
+											<div class="cart-product__details-code tooltip">
+												<p>SFL hs 21 02</p>
+												<span class="tooltiptext">вислоухий шотландец с окрасом арлекин и агути фактор</span>
+											</div>
+											<p class="cart-product__details-gender">Male</p>
+										</div>
+									</div>
+								</div>
+							</article>
 						</div>
-					</article>
+						<div class="pagination">
+							<a href="#" class="pagination__arrow pagination__arrow--prew pagination__arrow--disabled">
+								<img class="pagination__arrow-icon" src="@img/button/arrow_r.svg" alt="arrow icon">
+							</a>
+							<ul class="pagination__list">
+								<li class="pagination__list-item">
+									<a href="#" class="pagination__list-num pagination__list-num--active">1</a>
+								</li>
+								<li class="pagination__list-item">
+									<a href="#" class="pagination__list-num">2</a>
+								</li>
+							</ul>
+							<a href="#" class="pagination__arrow">
+								<img class="pagination__arrow-icon" src="@img/button/arrow_r.svg" alt="arrow icon">
+							</a>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -366,6 +441,7 @@
 			</div>
 		</footer>
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="js/app.min.js"></script>
 </body>
 

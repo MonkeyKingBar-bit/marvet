@@ -19,6 +19,8 @@ EffectFade, Lazy, Manipulation
 // Стилі Swiper
 // Базові стилі
 import "../../scss/base/swiper.scss";
+import "../../scss/base/slick.scss";
+// import {thumbnailsSettings} from "lightgallery/plugins/thumbnail/lg-thumbnail-settings.js";
 // Повний набір стилів з scss/libs/swiper.scss
 // import "../../scss/libs/swiper.scss";
 // Повний набір стилів з node_modules
@@ -233,84 +235,6 @@ function initSliders() {
         nextEl: ".review__arrow--next",
       },
     });
-
-    // const miniSlider = new Swiper(".hero__mini-slider", {
-    //   // Вказуємо склас потрібного слайдера
-    //   // Підключаємо модулі слайдера
-    //   // для конкретного випадку
-    //   modules: [Navigation, Controller],
-    //   observer: true,
-    //   observeParents: true,
-    //   slidesPerView: 2,
-    //   slideToClickedSlide: true,
-    //   spaceBetween: 20,
-    //   //autoHeight: true,
-    //   speed: 800,
-
-    //   //touchRatio: 0,
-    //   //simulateTouch: false,
-    //   //loop: true,
-    //   //preloadImages: false,
-    //   //lazy: true,
-
-    //   /*
-    // 	// Ефекти
-    // 	effect: 'fade',
-    // 	autoplay: {
-    // 		delay: 3000,
-    // 		disableOnInteraction: false,
-    // 	},
-    // 	*/
-
-    //   // Пагінація
-    //   /*
-    // 	pagination: {
-    // 		el: '.swiper-pagination',
-    // 		clickable: true,
-    // 	},
-    // 	*/
-
-    //   // Скроллбар
-    //   /*
-    // 	scrollbar: {
-    // 		el: '.swiper-scrollbar',
-    // 		draggable: true,
-    // 	},
-    // 	*/
-
-    //   // Кнопки "вліво/вправо"
-    //   // navigation: {
-    //   //   prevEl: ".hero__arrow--left",
-    //   //   nextEl: ".hero__arrow--right",
-    //   // },
-    //   /*
-    // 	// Брейкпоінти
-    // 	breakpoints: {
-    // 		640: {
-    // 			slidesPerView: 1,
-    // 			spaceBetween: 0,
-    // 			autoHeight: true,
-    // 		},
-    // 		768: {
-    // 			slidesPerView: 2,
-    // 			spaceBetween: 20,
-    // 		},
-    // 		992: {
-    // 			slidesPerView: 3,
-    // 			spaceBetween: 20,
-    // 		},
-    // 		1268: {
-    // 			slidesPerView: 4,
-    // 			spaceBetween: 30,
-    // 		},
-    // 	},
-    // 	*/
-    //   // Події
-    //   on: {},
-    // });
-
-    // mainSlider.controller.control = mainSlider;
-    // miniSlider.controller.control = mainSlider;
   }
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
@@ -349,3 +273,48 @@ window.addEventListener("load", function (e) {
   // Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
   //initSlidersScroll();
 });
+
+$(document).ready(function () {
+  $('.slider').slick( {
+    arrows: true,
+    adaptiveHeight: true,
+    dots: true,
+    slidesToShow: 5,
+    slidesToScroll: 3,
+    speed: 100,
+    easing: 'linear',
+    infinity: false,
+    initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnFocus: true,
+    pauseOnHover: true,
+    pauseOnDotsHover: true,
+    draggable: false,
+    touchThreshold: 10,
+    rows: 1,
+    slidesPerRow: 1,
+    centerMode: true,
+    variableWidth: true,
+    asNavFor: '.sliderbig',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 5,
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+
+        }
+      }
+    ],
+  });
+  $('.sliderbig').slick({
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider'
+  });
+})
