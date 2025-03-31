@@ -423,19 +423,34 @@
 							</div>
 							<div class="popup__text">
 								<p class="popup__text-header">Все поля обязательны для заполнения</p>
-								<form class="popup__text-form" action="components/sendmail/sendmail.php" method="POST">
+<!--								components/sendmail/sendmail.php-->
+								<form class="popup__text-form" action="#" method="POST" enctype="multipart/form-data">
 									<!--Need to add validation!!!!!-->
-									<label for="name">Имя</label>
-									<input id="name" type="text" name="form[name]" data-error="Error" placeholder="Kitty Marvet" class="input">
+									<div class="popup__text-form__fields">
+										<div>
+											<label for="name">Имя</label>
+											<input id="name" type="text" data-required name="form[name]" data-error="Error" placeholder="Kitty Marvet" class="input">
+										</div>
 
-									<label for="tel">Телефон</label>
-									<input id="tel" type="tel" name="form[tel]" data-error="Error" placeholder="+123456789" class="input">
+										<div>
+											<label for="tel">Телефон</label>
+											<input id="tel" type="tel" data-required name="form[tel]" data-error="Error" placeholder="+123456789" class="input">
+										</div>
 
-									<label for="email">Электронная почта</label>
-									<input id="email" type="email" name="form[email]" data-error="Error" placeholder="test@gmail.com" class="input">
+										<div>
+											<label for="email">Электронная почта</label>
+											<input id="email" type="email"
+												   data-required name="form[email]" data-error="Error" placeholder="test@gmail.com" class="input">
+										</div>
 
-									<label for="question">Вопрос</label>
-									<input id="question" type="text" name="form[question]" data-error="Error" placeholder="write text here" class="input">
+										<div>
+											<label for="question">Вопрос</label>
+											<textarea id="question" name="form[question]"
+													  autocomplete="off"
+													  data-required
+													  data-error="Error" placeholder="write text here" class="input"></textarea>
+										</div>
+									</div>
 
 									<div class="checkbox">
 										<input id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
@@ -448,7 +463,7 @@
 
 									<div class="popup__text-form__button">
 										<button type="reset" class="form__button button button--transparent"><span>Отмена</span></button>
-										<button type="submit" class="button button--transparent"><span>Отправить</span></button>
+										<button type="submit" class="form__button button button--transparent"><span>Отправить</span></button>
 									</div>
 								</form>
 							</div>

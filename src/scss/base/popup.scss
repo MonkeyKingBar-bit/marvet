@@ -30,6 +30,8 @@ body::after {
 		color: #F3F3F3;
 		&-left, &-right {
 			padding: 20px 60px;
+			@include adaptiveValue("padding-left", 60, 10);
+			@include adaptiveValue("padding-right", 60, 10);
 		}
 		&-left {
 			margin: auto 0;
@@ -58,6 +60,9 @@ body::after {
 					gap: 15px;
 				}
 			}
+			@media (max-width: $tablet) {
+				display: none;
+			}
 		}
 		&-right {
 			background-color: $darkTurquoiseColor;
@@ -65,11 +70,28 @@ body::after {
 			border-bottom-right-radius: 20px;
 			position: relative;
 			//width: 70%;
+			.input {
+				color: #A4A6B3;
+				//font-size: toRem(18);
+				@include adaptiveValue("font-size", 18, 14);
+				line-height: toRem(28);
+				margin-top: toRem(8);
+				padding: toRem(8);
+				border: 1px solid #52526B;
+				border-radius: 6px;
+				&._form-focus {
+					color: #DDE2FF;
+					//border-color: #DDE2FF;
+				}
+				&._form-error {
+					color: $orangeColor;
+				}
+			}
 			.input[placeholder]:not([data-placeholder-nohiden]) {
 				&::placeholder {
 					color: #DDE2FF;
 					background: transparent;
-					border: 1px solid #DDE2FF;
+					//border: 1px solid #DDE2FF;
 					@include adaptiveValue("padding-left", 32, 10);
 					@include adaptiveValue("font-size", 16, 13);
 				}
@@ -78,6 +100,9 @@ body::after {
 				font-family: "Poppins", sans-serif;
 				font-size: toRem(13);
 				line-height: toRem(18);
+			}
+			@media (max-width: $tablet) {
+				border-radius: 20px;
 			}
 		}
 	}
@@ -94,7 +119,8 @@ body::after {
 	&__title {
 		font-family: "Poppins", sans-serif;
 		font-weight: 700;
-		font-size: toRem(32);
+		//font-size: toRem(32);
+		@include adaptiveValue("font-size", 32, 20);
 		line-height: toRem(36);
 		color: #F3F3F3;
 		margin-bottom: toRem(16);
@@ -102,16 +128,20 @@ body::after {
 	&__subtitle {
 		font-weight: 300;
 		line-height: toRem(22);
-		font-size: toRem(14);
+		//font-size: toRem(14);
+		@include adaptiveValue("font-size", 14, 12);
 		color: #A4A6B3;
 	}
 	&__text{
-		margin-top: toRem(40);
+		//margin-top: toRem(40);
+		@include adaptiveValue("margin-top", 40, 30);
+
 		&-header {
 			font-family: "Poppins", sans-serif;
 			font-weight: 600;
 			line-height: toRem(25);
-			margin-bottom: toRem(32);
+			margin-bottom: toRem(22);
+			@include adaptiveValue("font-size", 16, 14);
 		}
 		&-form {
 			display: flex;
@@ -122,13 +152,43 @@ body::after {
 				flex-direction: row;
 				justify-content: space-around;
 				align-items: center;
+				@include adaptiveValue("font-size", 16, 12);
+				gap: toRem(16);
 				.button--transparent {
 					border: 1px solid #818191;
 					border-radius: 4px;
 					padding: toRem(12) toRem(32);
 				}
+				@media (max-width: $mobileSmall) {
+					flex-direction: column;
+					text-align: center;
+					.form__button {
+						width: 100%;
+						justify-content: center;
+					}
+				}
+			}
+			&__fields {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: toRem(20);
+				grid-template-rows: auto auto;
+				align-items: center;
+				& label {
+					@include adaptiveValue("font-size", 16, 14);
+				}
+				@media (max-width: $tablet) {
+					& {
+						align-items: flex-start;
+					}
+				}
 			}
 		}
+	}
+	&.header__logo {
+		outline: none;
+		width: inherit;
+		height: inherit;
 	}
 }
 .popup_show {
