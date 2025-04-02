@@ -32,16 +32,18 @@
 	$body = '<h1>Thanks for attention!</h1>';
 
 	if(trim(!empty($_POST['email']))){
-		$body.=$_POST['form[email]'];
+		$body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
 	}
-    if(trim(!empty($_POST['form[name]']))){
-        $body.=$_POST['form[name]'];
-	}
-    if(trim(!empty($_POST['form[tel]']))){
-        $body.=$_POST['form[tel]'];
-	}
-    if(trim(!empty($_POST['form[question]']))){
-        $body.=$_POST['form[question]'];
+    if(trim(!empty($_POST['name']))){
+        $body.='<p><strong>Name:</strong> '.$_POST['name'].'</p>';
+
+    }
+    if(trim(!empty($_POST['phone']))){
+        $body.='<p><strong>Phone:</strong> '.$_POST['phone'].'</p>';
+    }
+    if(trim(!empty($_POST['message']))){
+        $body.=$_POST['message'];
+        $body.='<p><strong>Message:</strong> '.$_POST['message'].'</p>';
 	}
 
 	/*

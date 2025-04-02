@@ -41,4 +41,7 @@
 	&__text {
 		align-self: center;
 	}
+	&._form-error .checkbox__label::before {
+		box-shadow: 0 0 15px red;
+	}
 }

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250329024749">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250402111124">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -414,7 +414,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="popup__body-right">
+						<div class="popup__body-right ">
 							<button data-close type="button" class="popup__close"></button>
 							<div class="popup__title">Оформление заказа</div>
 							<div class="popup__subtitle">
@@ -423,32 +423,43 @@
 							</div>
 							<div class="popup__text">
 								<p class="popup__text-header">Все поля обязательны для заполнения</p>
-								<form class="popup__text-form" action="components/sendmail/sendmail.php" method="POST">
+								<!--								components/sendmail/sendmail.php-->
+								<form class="popup__text-form form__body" action="#" method="POST" enctype="multipart/form-data">
 									<!--Need to add validation!!!!!-->
-									<label for="name">Имя</label>
-									<input id="name" type="text" name="form[name]" data-error="Error" placeholder="Kitty Marvet" class="input">
+									<div class="popup__text-form__fields">
+										<div class="form__item">
+											<label for="formName">Имя</label>
+											<input id="formName" type="text" data-required name="name" data-error="Error" class="input">
+										</div>
 
-									<label for="tel">Телефон</label>
-									<input id="tel" type="tel" name="form[tel]" data-error="Error" placeholder="+123456789" class="input">
+										<div class="form__item">
+											<label for="formPhone">Телефон</label>
+											<input id="formPhone" type="tel" data-required name="phone" data-error="Error" class="input">
+										</div>
 
-									<label for="email">Электронная почта</label>
-									<input id="email" type="email" name="form[email]" data-error="Error" placeholder="test@gmail.com" class="input">
+										<div class="form__item">
+											<label for="formEmail">Электронная почта</label>
+											<input id="formEmail" type="text" data-required="email" name="email" data-error="Error" class="input">
+										</div>
 
-									<label for="question">Вопрос</label>
-									<input id="question" type="text" name="form[question]" data-error="Error" placeholder="write text here" class="input">
+										<div class="form__item">
+											<label for="formMessage">Вопрос</label>
+											<textarea id="formMessage" name="message" data-required data-error="Error" class="input"></textarea>
+										</div>
+									</div>
 
 									<div class="checkbox">
-										<input id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-										<label for="c_1" class="checkbox__label">
-											<span class="checkbox__text">Согласен(на) с политикой конфиденциальности
-												сайта и даю согласие на обработку персональных данных, разрешённых
+										<input id="formAgreement" checked data-error="Error" class="checkbox__input" type="checkbox" name="agreement">
+										<label for="formAgreement" class="checkbox__label">
+											<span class="checkbox__text">Согласен(на) с <a href="">политикой конфиденциальности</a>
+												сайта и даю согласие на <a href="">обработку персональных данных</a>, разрешённых
 												для распространения</span>
 										</label>
 									</div>
 
 									<div class="popup__text-form__button">
 										<button type="reset" class="form__button button button--transparent"><span>Отмена</span></button>
-										<button type="submit" class="button button--transparent"><span>Отправить</span></button>
+										<button type="submit" class="form__button button button--transparent"><span>Отправить</span></button>
 									</div>
 								</form>
 							</div>
@@ -458,8 +469,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20250329024749"></script>
-	<script src="js/app.min.js?_v=20250329024749"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20250402111124"></script>
+	<script src="js/app.min.js?_v=20250402111124"></script>
 </body>
 
 </html>

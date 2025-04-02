@@ -84,7 +84,8 @@ body::after {
 					//border-color: #DDE2FF;
 				}
 				&._form-error {
-					color: $orangeColor;
+					//color: $orangeColor;
+					box-shadow: 0 0 15px red;
 				}
 			}
 			.input[placeholder]:not([data-placeholder-nohiden]) {
@@ -183,6 +184,26 @@ body::after {
 					}
 				}
 			}
+			&.form__body {
+				position: relative;
+				&::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 2;
+					background: rgba(51, 51, 51, 0.5) url("@img/bg/loading.svg") center / 50px no-repeat;
+					opacity: 0;
+					visibility: hidden;
+					transition: all 0.5s ease 0s;
+				}
+				&._sending::after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
 		}
 	}
 	&.header__logo {
@@ -215,7 +236,6 @@ body::after {
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
 	background-color: #eee;
-	//padding: 20px;
 	width: 100%;
 	max-width: 900px;
 	border-radius: 20px;

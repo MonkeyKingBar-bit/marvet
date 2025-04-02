@@ -414,7 +414,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="popup__body-right">
+						<div class="popup__body-right ">
 							<button data-close type="button" class="popup__close"></button>
 							<div class="popup__title">Оформление заказа</div>
 							<div class="popup__subtitle">
@@ -424,39 +424,38 @@
 							<div class="popup__text">
 								<p class="popup__text-header">Все поля обязательны для заполнения</p>
 <!--								components/sendmail/sendmail.php-->
-								<form class="popup__text-form" action="#" method="POST" enctype="multipart/form-data">
+								<form class="popup__text-form form__body" action="#" method="POST" enctype="multipart/form-data">
 									<!--Need to add validation!!!!!-->
 									<div class="popup__text-form__fields">
-										<div>
-											<label for="name">Имя</label>
-											<input id="name" type="text" data-required name="form[name]" data-error="Error" placeholder="Kitty Marvet" class="input">
+										<div class="form__item">
+											<label for="formName">Имя</label>
+											<input id="formName" type="text" data-required name="name" data-error="Error" class="input">
 										</div>
 
-										<div>
-											<label for="tel">Телефон</label>
-											<input id="tel" type="tel" data-required name="form[tel]" data-error="Error" placeholder="+123456789" class="input">
+										<div class="form__item">
+											<label for="formPhone">Телефон</label>
+											<input id="formPhone" type="tel" data-required name="phone" data-error="Error" class="input">
 										</div>
 
-										<div>
-											<label for="email">Электронная почта</label>
-											<input id="email" type="email"
-												   data-required name="form[email]" data-error="Error" placeholder="test@gmail.com" class="input">
+										<div class="form__item">
+											<label for="formEmail">Электронная почта</label>
+											<input id="formEmail" type="text"
+												   data-required="email" name="email" data-error="Error" class="input">
 										</div>
 
-										<div>
-											<label for="question">Вопрос</label>
-											<textarea id="question" name="form[question]"
-													  autocomplete="off"
+										<div class="form__item">
+											<label for="formMessage">Вопрос</label>
+											<textarea id="formMessage" name="message"
 													  data-required
-													  data-error="Error" placeholder="write text here" class="input"></textarea>
+													  data-error="Error" class="input"></textarea>
 										</div>
 									</div>
 
 									<div class="checkbox">
-										<input id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-										<label for="c_1" class="checkbox__label">
-											<span class="checkbox__text">Согласен(на) с политикой конфиденциальности
-												сайта и даю согласие на обработку персональных данных, разрешённых
+										<input id="formAgreement" checked data-error="Error" class="checkbox__input" type="checkbox" name="agreement">
+										<label for="formAgreement" class="checkbox__label">
+											<span class="checkbox__text">Согласен(на) с <a href="">политикой конфиденциальности</a>
+												сайта и даю согласие на <a href="">обработку персональных данных</a>, разрешённых
 												для распространения</span>
 										</label>
 									</div>
