@@ -24,6 +24,193 @@ body::after {
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
+	&__body {
+		display: grid;
+		grid-template-columns: auto auto;
+		color: #F3F3F3;
+		&-left, &-right {
+			padding: 20px 60px;
+			@include adaptiveValue("padding-left", 60, 10);
+			@include adaptiveValue("padding-right", 60, 10);
+		}
+		&-left {
+			margin: auto 0;
+			display: flex;
+			flex-direction: column;
+			gap: 64px;
+			&__header {
+				display: flex;
+				flex-direction: column;
+				&_subtitle {
+					letter-spacing: toRem(0.1);
+					line-height: toRem(24);
+					color: #000000;
+					font-size: toRem(13);
+					padding-left: toRem(10);
+				}
+			}
+			.popup {
+				&__title {
+					color: #000;
+				}
+				&__text {
+					color: #414141;
+					display: flex;
+					flex-direction: column;
+					gap: 15px;
+				}
+			}
+			@media (max-width: $tablet) {
+				display: none;
+			}
+		}
+		&-right {
+			background-color: $darkTurquoiseColor;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+			position: relative;
+			//width: 70%;
+			.input {
+				color: #A4A6B3;
+				//font-size: toRem(18);
+				@include adaptiveValue("font-size", 18, 14);
+				line-height: toRem(28);
+				margin-top: toRem(8);
+				padding: toRem(8);
+				border: 1px solid #52526B;
+				border-radius: 6px;
+				&._form-focus {
+					color: #DDE2FF;
+					//border-color: #DDE2FF;
+				}
+				&._form-error {
+					//color: $orangeColor;
+					box-shadow: 0 0 15px red;
+				}
+			}
+			.input[placeholder]:not([data-placeholder-nohiden]) {
+				&::placeholder {
+					color: #DDE2FF;
+					background: transparent;
+					//border: 1px solid #DDE2FF;
+					@include adaptiveValue("padding-left", 32, 10);
+					@include adaptiveValue("font-size", 16, 13);
+				}
+			}
+			.checkbox__text {
+				font-family: "Poppins", sans-serif;
+				font-size: toRem(13);
+				line-height: toRem(18);
+			}
+			@media (max-width: $tablet) {
+				border-radius: 20px;
+			}
+		}
+	}
+	&__close::before {
+		position: absolute;
+		display: inline-block;
+		content: "";
+		right: 10px;
+		top: 10px;
+		width: 48px;
+		height: 48px;
+		background: url("@img/button/close.svg");
+	}
+	&__title {
+		font-family: "Poppins", sans-serif;
+		font-weight: 700;
+		//font-size: toRem(32);
+		@include adaptiveValue("font-size", 32, 20);
+		line-height: toRem(36);
+		color: #F3F3F3;
+		margin-bottom: toRem(16);
+	}
+	&__subtitle {
+		font-weight: 300;
+		line-height: toRem(22);
+		//font-size: toRem(14);
+		@include adaptiveValue("font-size", 14, 12);
+		color: #A4A6B3;
+	}
+	&__text{
+		//margin-top: toRem(40);
+		@include adaptiveValue("margin-top", 40, 30);
+
+		&-header {
+			font-family: "Poppins", sans-serif;
+			font-weight: 600;
+			line-height: toRem(25);
+			margin-bottom: toRem(22);
+			@include adaptiveValue("font-size", 16, 14);
+		}
+		&-form {
+			display: flex;
+			flex-direction: column;
+			row-gap: toRem(24);
+			&__button {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				@include adaptiveValue("font-size", 16, 12);
+				gap: toRem(16);
+				.button--transparent {
+					border: 1px solid #818191;
+					border-radius: 4px;
+					padding: toRem(12) toRem(32);
+				}
+				@media (max-width: $mobileSmall) {
+					flex-direction: column;
+					text-align: center;
+					.form__button {
+						width: 100%;
+						justify-content: center;
+					}
+				}
+			}
+			&__fields {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: toRem(20);
+				grid-template-rows: auto auto;
+				align-items: center;
+				& label {
+					@include adaptiveValue("font-size", 16, 14);
+				}
+				@media (max-width: $tablet) {
+					& {
+						align-items: flex-start;
+					}
+				}
+			}
+			&.form__body {
+				position: relative;
+				&::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 2;
+					background: rgba(51, 51, 51, 0.5) url("@img/bg/loading.svg") center / 50px no-repeat;
+					opacity: 0;
+					visibility: hidden;
+					transition: all 0.5s ease 0s;
+				}
+				&._sending::after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+	&.header__logo {
+		outline: none;
+		width: inherit;
+		height: inherit;
+	}
 }
 .popup_show {
 	z-index: 150;
@@ -42,16 +229,13 @@ body::after {
 	min-height: 100%;
 	flex: 1 1 auto;
 	width: 100%;
-	display: flex;
 	justify-content: center;
-	align-items: center;
 }
 .popup__content {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
 	background-color: #eee;
-	padding: 20px;
 	width: 100%;
 	max-width: 900px;
 	border-radius: 20px;

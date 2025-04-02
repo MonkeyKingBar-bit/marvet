@@ -268,13 +268,13 @@
     text-align: center;
     @include adaptiveValue("gap", 20, 5);
     @media (min-width: $mobile) {
-      max-width: toRem(712);
+      max-width: toRem(785);
     }
   }
   // .subscribe__title
   &__title {
-    font-family: "Pangolin", sans-serif;
-    @include adaptiveValue("font-size", 58, 22);
+    font-family: "Pangolin", cursive;
+    @include adaptiveValue("font-size", 58, 20);
     line-height: toRem(48);
     color: $whiteColor;
   }
