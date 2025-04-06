@@ -84,7 +84,19 @@
             filter_form.classList.toggle("element-hidden");
         }));
     }
+    function logIn() {
+        const loginContainer = document.querySelector(".container");
+        const registerBtn = document.querySelector(".register-btn");
+        const loginBtn = document.querySelector(".login-btn");
+        registerBtn.addEventListener("click", (() => {
+            loginContainer.classList.add("active");
+        }));
+        loginBtn.addEventListener("click", (() => {
+            loginContainer.classList.remove("active");
+        }));
+    }
     menuFilter();
+    logIn();
     class Popup {
         constructor(options) {
             let config = {
