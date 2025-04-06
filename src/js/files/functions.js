@@ -753,12 +753,16 @@ export function logIn() {
 	const registerBtn = document.querySelector('.register-btn');
 	const loginBtn = document.querySelector('.login-btn');
 
-	registerBtn.addEventListener('click', () => {
-		loginContainer.classList.add('active');
-	});
-	loginBtn.addEventListener('click', () => {
-		loginContainer.classList.remove('active');
-	})
+	if (registerBtn) {
+		registerBtn.addEventListener('click', () => {
+			loginContainer.classList.add('active');
+		});
+	}
+	if (loginBtn) {
+		loginBtn.addEventListener('click', () => {
+			loginContainer.classList.remove('active');
+		})
+	}
 }
 
 menuFilter();
